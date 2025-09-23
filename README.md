@@ -36,7 +36,7 @@ These notebooks require **Python ≥3.9**.
    ```bash
    jupyter notebook
    ```
-   Launch Jupyter Lab:
+   or Launch Jupyter Lab:
    ```bash
    jupyter lab
    ```
