@@ -3,9 +3,9 @@
 A collection of open Jupyter notebooks demonstrating **quantitative workflows for X-ray computed tomography (XCT) data in lithium-ion batteries**.  
 
 These notebooks provide reproducible examples for:  
-1. **Jelly roll unrolling** — transforming 2D slices of cylindrical cells into polar coordinates (radial distance, angle) and fitting an ideal spiral to quantify deviations from the expected geometry.  
-2. **Electrode overhang assessment** — measuring overhang features in cylindrical cells to assess manufacturing quality.  
-3. **Cracked particle analysis** — analyzing and comparing radial gray-level profiles in large populations of cracked NMC particles, enabling population-level insights.  
+1. **Jelly roll unrolling**; transforming 2D slices of cylindrical cells into polar coordinates (radial distance, angle) and fitting an ideal spiral to quantify deviations from the expected geometry.  
+2. **Electrode overhang assessment**; measuring overhang features in cylindrical cells to assess manufacturing quality.  
+3. **Cracked particle analysis**; analyzing and comparing radial gray-level profiles in large populations of cracked NMC particles, enabling population-level insights.  
 
 All notebooks include lightweight example datasets (cropped, 8-bit volumes) so they run quickly and out of the box.  
 
