@@ -30,12 +30,15 @@ These notebooks require **Python ≥3.9**.
 4. Interactive Widget:
    Note on widgets:Some notebooks use ipywidgets for parameter exploration. These are tested with Jupyter Notebook ≥7.0 (or JupyterLab ≥4.0).
 
-## Usage
-## 🚀 Usage  
+## Usage  
 
-1. Launch Jupyter:  
+1. Launch Jupyter Notebook:  
    ```bash
    jupyter notebook
+or
+   Launch Jupyter Lab:
+   ```bash
+   jupyter lab
 
 2. Open the notebooks in the `notebooks/` folder:  
    - `01_jellyroll_unroll_spiral.ipynb`  
