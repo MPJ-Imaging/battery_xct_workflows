@@ -35,11 +35,12 @@ These notebooks require **Python ≥3.9**.
 1. Launch Jupyter Notebook:  
    ```bash
    jupyter notebook
+   ```
 or
    Launch Jupyter Lab:
    ```bash
    jupyter lab
-
+   ```
 2. Open the notebooks in the `notebooks/` folder:  
    - `01_jellyroll_unroll_spiral.ipynb`  
    - `02_overhang_quality.ipynb`  
