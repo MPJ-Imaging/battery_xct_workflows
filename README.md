@@ -54,7 +54,8 @@ or
 
 - This repo includes **lightweight cropped 8-bit volumes** in `data/` so notebooks run out of the box.  
 - Larger original datasets are not necessary for reproducing the examples.  
-- Figures in the accompanying paper are generated from these reduced datasets.  
+- Figures in the accompanying paper are generated from these reduced datasets.
+- Where Machine Learning Segmentation or De-noising is utilised this is stated, but models are not made available. 
 
 ---
 
