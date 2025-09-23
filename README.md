@@ -1,4 +1,4 @@
-# Battery XCT Example Notebooks  
+# Battery XCT Notebooks  
 
 A collection of open Jupyter notebooks demonstrating **quantitative workflows for X-ray computed tomography (XCT) data in lithium-ion batteries**.  
 
