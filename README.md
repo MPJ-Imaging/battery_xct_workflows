@@ -17,7 +17,7 @@ These notebooks require **Python ≥3.9**.
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/YOUR-USERNAME/battery-xct-example-notebooks.git
+   git clone https://github.com/MPJ-Imaging/battery_xct_notebooks.git
    cd battery-xct-example-notebooks
 2. Create a fresh environment (recommended):
    ```bash
