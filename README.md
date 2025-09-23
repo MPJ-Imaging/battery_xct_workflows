@@ -28,7 +28,7 @@ These notebooks require **Python ≥3.9**.
    ```bash
    pip install -r requirements.txt
 4. Interactive Widget:
-   Note on widgets:Some notebooks use ipywidgets for parameter exploration. These are tested with Jupyter Notebook ≥7.0 (or JupyterLab ≥4.0).
+   Some notebooks use ipywidgets for parameter exploration. These are tested with Jupyter Notebook ≥7.0 (or JupyterLab ≥4.0).
 
 ## Usage  
 
