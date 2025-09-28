@@ -48,17 +48,23 @@ The example notebooks presented here address this gap by providing accessible, o
 - Unroll cylindrical cell “jelly rolls” into polar coordinates (radial distance, angle) and fit an ideal spiral to evaluate deviations from the expected winding pattern, and
 - Characterize and compare radial gray-level variations in large populations of cracked NMC particles, enabling statistical insights into structural heterogeneity.  
 
-These workflows are intended both as *ready-to-use examples* for battery scientists and as *adaptable templates* for tomography researchers in other domains. By distributing the methods as Jupyter notebooks with example data, the project lowers the barrier for entry, encourages reuse, and promotes reproducibility in XCT-based research.  
+These workflows are intended both as *ready-to-use examples* for battery scientists and as *adaptable templates* for tomography researchers in other domains. By distributing the methods as Jupyter notebooks with example data, the project lowers the barrier for entry, encourages reuse, and promotes reproducibility in XCT-based research.
 
 # Illustrative outputs
-![(a) Slice through a cylindrical cell tomogram with overhang masks overlayed, 
-(b) the distribution of overhang deflection angles in the cell analysed in the notebook.](fig1.png)
 
-![Unrolled cylindrical cell slice into polar coordinates with deviation (MaxAE) from a fitted spiral used to detect buckling. 
-Image generated using the example notebook and dataset.](fig2.png)
+![Slice through a cylindrical cell tomogram with overhang masks overlayed, distribution of overhang deflection angles in the cell analysed in the notebook.](fig1.png)  
 
-![Radial gray-level profiles for a population of cracked NMC particles, 
-demonstrating the ability to analyse many particles statistically. Image generated using the example notebook and dataset.](fig3.png)
+*Figure 1. (a) Slice through a cylindrical cell tomogram with overhang masks overlayed.  
+(b) Distribution of overhang deflection angles in the analysed cell.*  
+
+![Unrolled cylindrical cell slice into polar coordinates with deviation (MaxAE) from a fitted spiral used to detect buckling.](fig2.png)  
+
+*Figure 2. Unrolled cylindrical cell slice into polar coordinates, showing deviation (MaxAE) from a fitted spiral to detect buckling.*  
+
+![Radial gray-level profiles for a population of cracked NMC particles.](fig3.png)  
+
+*Figure 3. Radial gray-level profiles for a population of cracked NMC particles, demonstrating the ability to analyse many particles statistically.*  
+
 
 # Acknowledgements
 
