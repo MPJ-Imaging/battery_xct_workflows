@@ -45,7 +45,7 @@ These notebooks require **Python ≥3.9**.
    ```
 2. Open the notebooks in the `notebooks/` folder:  
    - `01_overhangs_analysis.ipynb`  
-   - `02_cylindrical_Cell_unrolling.ipynb`  
+   - `02_cylindrical_cell_unrolling.ipynb`  
    - `03_cracking_active_particles.ipynb`  
 
 3. Run all cells to reproduce the workflows. Each notebook generates example plots and figures.  
