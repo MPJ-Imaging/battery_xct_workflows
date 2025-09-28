@@ -40,13 +40,13 @@ By lowering the barrier to quantitative XCT analysis, these example workflows pr
 
 # Statement of need
 
-X-ray computed tomography (XCT) is increasingly used in battery research to visualize cell components and degradation phenomena. While raw XCT data are widely generated, reproducible workflows for quantitative analysis remain scarce. Newcomers to the technique often struggle to move beyond qualitative analysis and many research groups rely on ad hoc scripts or proprietary software, which makes comparisons across studies difficult and slows the adoption of best practices.  
+X-ray computed tomography (XCT) is increasingly used in battery research to visualize cell components and degradation phenomena. While raw XCT data are widely generated, reproducible workflows for quantitative analysis remain scarce. Newcomers to the technique often struggle to move beyond qualitative analysis, and many research groups rely on different proprietary softwares, often with little available documentation. This makes comparisons across studies difficult and slows the adoption of best practices.  
 
 The example notebooks presented here address this gap by providing accessible, open, and well-documented workflows for XCT analysis tasks in batteries. The notebooks are designed for researchers who wish to:  
  
 - Quantify electrode overhang in cylindrical cells to assess manufacturing quality through a range of geometric measures,
 - Unroll cylindrical cell “jelly rolls” into polar coordinates (radial distance, angle) and fit an ideal spiral to evaluate deviations from the expected winding pattern, and
-- Characterize and compare radial gray-level variations in large populations of cracked NMC particles, enabling statistical insights into structural heterogeneity.  
+- Characterize and compare radial gray-level variations in large populations of cracked NMC particles, enabling statistical insights into structural heterogeneity. 
 
 These workflows are intended both as *ready-to-use examples* for battery scientists and as *adaptable templates* for tomography researchers in other domains. By distributing the methods as Jupyter notebooks with example data, the project lowers the barrier for entry, encourages reuse, and promotes reproducibility in XCT-based research.
 
@@ -73,3 +73,4 @@ The authors thanks colleagues and collaborators for feedback on the notebook des
 This work was carried out with funding from the Faraday Institution (faraday.ac.uk; EP/S003053/1), grant numbers, FIRG060 and FIRG066; and the EPSRC grant EP/M014045/1. M.P.J., P.R.S., and R.J. acknowledged Innovate UK for funding via the BATSEED Project (grant number: 10044823). PhD funding for H.C.W.P by the Faraday Institution was also acknowledged: EPSRC training grant number EP/S514901/1. 
 
 # References
+
