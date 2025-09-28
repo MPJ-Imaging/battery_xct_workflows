@@ -54,7 +54,7 @@ These notebooks require **Python ≥3.9**.
 
 ## Data availability  
 
-- This repo includes **lightweight cropped 8-bit volumes** in `data/` so notebooks run out of the box.  
+- This repo includes **lightweight volumes and images** (by X-ray CT standards) in `data/` so notebooks run out of the box.  
 - Larger original datasets are not necessary for reproducing the examples.  
 - Figures in the accompanying paper are generated from these reduced datasets.
 
