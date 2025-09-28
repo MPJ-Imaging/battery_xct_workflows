@@ -34,7 +34,7 @@ X-ray computed tomography (XCT) is a powerful tool for non-destructive character
 
 This submission provides a set of open Jupyter notebooks that demonstrate practical analysis workflows for battery XCT data. The notebooks focus on three tasks: (1) quantifying electrode overhang in cylindrical cells to assess manufacturing quality through multiple geometric measurements, (2) unrolling 2D slices of cylindrical cell “jelly rolls” into polar coordinates (radial distance, angle), including fitting of an ideal spiral to quantify deviations from the expected geometry [@kok2019virtual], and (3) analyzing gray-level variations in radial layers of cracked nickel–manganese–cobalt (NMC) particles, with the ability to process and compare a large number of particles to reveal population-level trends [@jones2024multilabel;@wade2022great]. Each notebook is accompanied by example data, including images and, where relevant, segmentation masks, so that the workflows can be executed without specialized preprocessing.  
 
-The notebooks are implemented in Python and make use of widely adopted scientific libraries, including NumPy [@harris2020numpy], SciPy [@virtanen2020scipy], scikit-image [@van2014scikit], Matplotlib [@hunter2007matplotlib], and scikit-learn [@pedregosa2011scikit]. By focusing on clarity and reproducibility, they are intended both as ready-to-use analysis examples for battery researchers and as adaptable templates for the wider imaging science community. All notebooks and supporting data are archived with a Zenodo DOI to ensure long-term accessibility.  
+The notebooks are implemented in Python and make use of widely adopted scientific libraries, including NumPy [@harris2020numpy], SciPy [@virtanen2020scipy], scikit-image [@van2014scikit], Matplotlib [@hunter2007matplotlib], and scikit-learn [@pedregosa2011scikit]. By focusing on clarity and reproducibility, they are intended both as ready-to-use analysis examples for battery researchers and as adaptable templates for the wider tomography and x-ray imaging communities. All notebooks and supporting data are archived with a Zenodo DOI to ensure long-term accessibility.  
 
 By lowering the barrier to quantitative XCT analysis, these example workflows promote transparent and reproducible research in battery science, and they may also serve as a starting point for similar analyses in other domains of materials tomography.  
 
@@ -53,16 +53,13 @@ These workflows are intended both as *ready-to-use examples* for battery scienti
 # Illustrative outputs
 
 ![Slice through a cylindrical cell tomogram with overhang masks overlayed, distribution of overhang deflection angles in the cell analysed in the notebook.](fig1.png)  
-
 *Figure 1. (a) Slice through a cylindrical cell tomogram with overhang masks overlayed.  
 (b) Distribution of overhang deflection angles in the analysed cell.*  
 
 ![Unrolled cylindrical cell slice into polar coordinates with deviation (MaxAE) from a fitted spiral used to detect buckling.](fig2.png)  
-
 *Figure 2. Unrolled cylindrical cell slice into polar coordinates, showing deviation (MaxAE) from a fitted spiral to detect buckling.*  
 
 ![Radial gray-level profiles for a population of cracked NMC particles.](fig3.png)  
-
 *Figure 3. Radial gray-level profiles for a population of cracked NMC particles, demonstrating the ability to analyse many particles statistically.*  
 
 
@@ -73,4 +70,5 @@ The authors thanks colleagues and collaborators for feedback on the notebook des
 This work was carried out with funding from the Faraday Institution (faraday.ac.uk; EP/S003053/1), grant numbers, FIRG060 and FIRG066; and the EPSRC grant EP/M014045/1. M.P.J., P.R.S., and R.J. acknowledged Innovate UK for funding via the BATSEED Project (grant number: 10044823). PhD funding for H.C.W.P by the Faraday Institution was also acknowledged: EPSRC training grant number EP/S514901/1. 
 
 # References
+
 
