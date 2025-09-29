@@ -60,14 +60,6 @@ These notebooks require **Python ≥3.9**.
 
 ---
 
-## Citation  
-
-If you use these notebooks, please cite the Zenodo archive:  
-
-> Jones, M. P. (2025). *Battery XCT Example Notebooks* (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX  
-
----
-
 ## License  
 
 This project is licensed under the terms of the [MIT License](LICENSE).  
