@@ -57,10 +57,10 @@ These workflows are intended both as *ready-to-use examples* for battery scienti
 (b) Distribution of overhang deflection angles in the analysed cell.*  
 
 ![Unrolled cylindrical cell slice into polar coordinates with deviation (MaxAE) from a fitted spiral used to detect buckling.](fig2.png)  
-*Figure 2. Unrolled cylindrical cell slice into polar coordinates, showing deviation (MaxAE) from a fitted spiral to detect buckling.*  
+*Figure 2. Cylindrical cell slice unrolled into polar coordinates and showing maximum absolute error (MaxAE) from a fitted spiral to detect buckling. In this case large buckles are detected in the central layers of the cell (layers 2 -4).*  
 
 ![Radial gray-level profiles for a population of cracked NMC particles.](fig3.png)  
-*Figure 3. Radial gray-level profiles for a population of cracked NMC particles, demonstrating the ability to analyse many particles statistically.*  
+*Figure 3. Mean normalised radial gray-level profiles for a population of cracked NMC particles, demonstrating the ability to analyse many particles statistically. In the pot above the population of particles are split into volume quartiles, with each quartile plotted separately. This method allows for comparisons in structural heterogeneity between different populations of particles imaged with XCT.*  
 
 
 # Acknowledgements
@@ -70,6 +70,7 @@ The authors thank colleagues and collaborators for feedback on the notebook desi
 This work was carried out with funding from the Faraday Institution (faraday.ac.uk; EP/S003053/1), grant numbers, FIRG060 and FIRG066; and the EPSRC grant EP/M014045/1. M.P.J. and R.J. acknowledged Innovate UK for funding via the BATSEED Project (grant number: 10044823). PhD funding for H.C.W.P by the Faraday Institution was also acknowledged: EPSRC training grant number EP/S514901/1. 
 
 # References
+
 
 
 
