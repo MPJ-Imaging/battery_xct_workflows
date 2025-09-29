@@ -3,8 +3,10 @@
 # Graylevel Radial Analysis of ParticlES (GRAPES)
 
 ##########################################################################################
+# Functions and workflows for the (radial) greyelvel analysis of particles from image data
+##########################################################################################
 # V1.0.0
-# Date: 2023-09-30
+# Date: 2025-09-30
 ##########################################################################################
 # Author: Matthew Jones
 ##########################################################################################
@@ -35,8 +37,6 @@ import os
 
 from joblib import Parallel, delayed
 import edt  # MLAEDT-3D's EDT module
-
-
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
