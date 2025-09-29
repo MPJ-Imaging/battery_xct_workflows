@@ -8,21 +8,21 @@ tags:
 authors:
   - name: Matthew P. Jones
     orcid: 0000-0001-6628-1464
-    affiliation: "1"
+    affiliation: "1, 2"
   - name: Hamish T. Reid
-    affiliation: "1, 3"
+    affiliation: "1, 2"
   - name: Huw C. W. Parks
     affiliation: "1, 2, 3"
   - name: Francesco Iacoviello
-    affiliation: "1"
+    affiliation: "1, 2"
   - name: Rhodri Jervis
     affiliation: "1, 2, 3"
 affiliations:
   - name: Electrochemical Innovation Lab, Department of Chemical Engineering, UCL, UK
     index: 1
-  - name: The Faraday Institution, Harwell Science and Innovation Campus, Didcot, UK
+  - name: Advanced Propulsion Lab, Marshgate Building, UCL, UK
     index: 2
-  - name: Advanced Propulsion Lab, Marshgate, UCL, UK
+  - name: The Faraday Institution, Harwell Science and Innovation Campus, Didcot, UK
     index: 3
 date: 2025-09-26                      # update on submit
 bibliography: paper.bib
@@ -70,6 +70,7 @@ The authors thank colleagues and collaborators for feedback on the notebook desi
 This work was carried out with funding from the Faraday Institution (faraday.ac.uk; EP/S003053/1), grant numbers, FIRG060 and FIRG066; and the EPSRC grant EP/M014045/1. M.P.J. and R.J. acknowledged Innovate UK for funding via the BATSEED Project (grant number: 10044823). PhD funding for H.C.W.P by the Faraday Institution was also acknowledged: EPSRC training grant number EP/S514901/1. 
 
 # References
+
 
 
 
