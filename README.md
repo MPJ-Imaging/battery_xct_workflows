@@ -1,6 +1,6 @@
-# Battery XCT Notebooks  
+# Battery XCT Workflows  
 
-A collection of open Jupyter notebooks demonstrating **quantitative workflows for X-ray computed tomography (XCT) data in lithium-ion batteries**.  
+A collection of open Jupyter notebooks demonstrating **quantitative workflows for X-ray computed tomography (XCT) data in lithium-ion cylindrical cell batteries**.  
 
 These notebooks provide reproducible examples for:  
 1. **Electrode overhang assessment** - measuring overhang features in cylindrical cells to assess manufacturing quality.  
