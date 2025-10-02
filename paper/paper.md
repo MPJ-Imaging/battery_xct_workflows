@@ -62,7 +62,7 @@ This contribution meets this need as a set of open, complete, and reproducible a
 
 # Conclusion
 
-Reliable battery quality assurance is essential for performance, safety, and trust in Li-ion technologies, and XCT is a key tool for observing defects before they become failures. However, without open, shareable analysis pipelines, XCT results are difficult to compare or reproduce across labs and products. The notebooks in `battery_xct_workflows` address this gap by providing examples for the three most common cylindrical cell XCT-based QA tasks — overhang quantification, canister metrology (including dent detection), and electrode buckling analysis. `battery_xct_workflows` is built entirely on popular open-source python libraries. By packaging runnable code, data, and narrative in one place, these workflows lower the barrier to quantitative XCT analysis, enable transparent benchmarking, and encourage reuse and adaptation in both research and industrial settings. We hope this resource will seed a community of practice around open battery QA, with future extensions to additional cell formats, fully 3D analyses, uncertainty reporting, and integration into automated testing pipelines.
+Reliable battery quality assurance is essential for performance, safety, and trust in Li-ion technologies, and XCT is a key tool for observing defects before they become failures. However, without open, shareable analysis pipelines, XCT results are difficult to compare or reproduce across labs and products. The notebooks in `battery_xct_workflows` address this gap by providing examples for the three most common cylindrical cell XCT-based QA tasks — overhang quantification, canister metrology (including dent detection), and electrode buckling analysis. By packaging runnable code, data, and narrative in one place, these workflows lower the barrier to quantitative XCT analysis, enable transparent benchmarking, and encourage reuse and adaptation in both research and industrial settings. We hope this resource will seed a community of practice around open battery QA, with future extensions to additional cell formats, fully 3D analyses, uncertainty reporting, and integration into automated testing pipelines.
 
 # Acknowledgements
 
@@ -71,6 +71,7 @@ The authors would like to acknowledge the open-source Python scientific ecosyste
 This work was carried out with funding from the Faraday Institution (faraday.ac.uk; EP/S003053/1), grant numbers, FIRG060 and FIRG066; and the EPSRC grant EP/M014045/1. M.P.J. and R.J. acknowledged Innovate UK for funding via the BATSEED Project (grant number: 10044823). PhD funding for H.C.W.P by the Faraday Institution was also acknowledged: EPSRC training grant number EP/S514901/1. 
 
 # References
+
 
 
 
