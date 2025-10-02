@@ -58,13 +58,13 @@ The contribution of this work lies in providing complete, reproducible workflows
 
 ![Slice through a cylindrical cell tomogram with overhang masks overlayed, distribution of overhang deflection angles in the cell analysed in the notebook.](fig1.png)  
 *Figure 1. (a) Slice through a cylindrical cell tomogram with overhang masks overlayed.  
-(b) Distribution of overhang deflection angles in the analysed cell.*  
+(b) Distribution of overhang deflection angles in the analysed cell. Overhang faults can lead to increased lithium plating and eventually short circuits.*  
 
 ![Ellipse fitted to a radial slice of a Li-ion cylindrical cell](fig2.png)  
-*Figure 2. By fitting an ellipse to the cannister we can measure a range of quality metrics. For example the cannister eccentricity can measure deformation (squishing). The fitted ellipse can also be used to detect and measure dents (dents calculated as error from the fitted ellipse). Both deformation and denting of the cannister can effect the the in-use safety of the cell.* 
+*Figure 2. By fitting an ellipse to the cannister we can measure a range of quality metrics. For example, the fitted ellipse is used to calculate cannister eccentricity (a proxy for cannister deformation) and is also used to detect and measure dents (calculated as error with respect to the ellipse). Both deformation and denting of the cannister can lead to in-use safety issues.* 
 
 ![Unrolled cylindrical cell slice into polar coordinates with deviation (MaxAE) from a fitted spiral used to detect buckling.](fig3.png)  
-*Figure 3. Cylindrical cell slice unrolled into polar coordinates and showing maximum absolute error (MaxAE) from a fitted spiral to detect buckling. In this case large buckles are detected in the central layers of the cell (layers 2 -4).*  
+*Figure 3. Cylindrical cell slice unrolled into polar coordinates and showing maximum absolute error (MaxAE) from a fitted spiral to detect buckling. In this case large buckles are detected in the central layers of the cell (layers 2 -4). Buckling is known to negatively effect capacity and is a known indicator of poor cell health.*  
 
 
 # Acknowledgements
@@ -74,6 +74,7 @@ The authors would like to acknowledge the open-source Python scientific ecosyste
 This work was carried out with funding from the Faraday Institution (faraday.ac.uk; EP/S003053/1), grant numbers, FIRG060 and FIRG066; and the EPSRC grant EP/M014045/1. M.P.J. and R.J. acknowledged Innovate UK for funding via the BATSEED Project (grant number: 10044823). PhD funding for H.C.W.P by the Faraday Institution was also acknowledged: EPSRC training grant number EP/S514901/1. 
 
 # References
+
 
 
 
