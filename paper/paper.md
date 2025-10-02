@@ -66,11 +66,12 @@ Reliable battery quality assurance is essential for performance, safety, and tru
 
 # Acknowledgements
 
-The authors would like to acknowledge the open-source Python scientific ecosystem (NumPy, SciPy, scikit-image, Matplotlib) that made this work possible.
+The authors would like to acknowledge the open-source Python scientific ecosystem (NumPy, SciPy, scikit-image, Matplotlib) that made this work possible (and enjoyable).
 
 This work was carried out with funding from the Faraday Institution (faraday.ac.uk; EP/S003053/1), grant numbers, FIRG060 and FIRG066; and the EPSRC grant EP/M014045/1. M.P.J. and R.J. acknowledged Innovate UK for funding via the BATSEED Project (grant number: 10044823). PhD funding for H.C.W.P by the Faraday Institution was also acknowledged: EPSRC training grant number EP/S514901/1. 
 
 # References
+
 
 
 
