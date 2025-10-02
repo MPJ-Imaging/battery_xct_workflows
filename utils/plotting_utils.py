@@ -3,6 +3,17 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 from ipywidgets import IntSlider, FloatRangeSlider, FloatSlider, Dropdown, Checkbox, Button, VBox, HBox
 
+def show_overlay(img, msk, ax, title=""):
+    # basic checks
+    if img.shape != msk.shape:
+        raise ValueError(f"Image/mask shapes differ: {img.shape} vs {msk.shape}")
+
+    ax.imshow(img, cmap="gray", interpolation="nearest")
+    alpha = (msk > 0).astype(float) * 0.5   # 0 where mask==0, 0.5 where mask>0
+    ax.imshow(msk, cmap="Reds", alpha=alpha, interpolation="nearest")
+    ax.set_title(title)
+    ax.axis("off")
+
 def view_axis0(volume, *, vmin=None, vmax=None, cmap='gray',
                downsample=1, continuous_update=False):
     """
@@ -166,6 +177,61 @@ def view_axis0_with_labels(volume, labels, *,
     controls_row2 = HBox([clim_slider])
     controls_row3 = HBox([alpha_slider, shuffle_btn])
     return VBox([controls_row1, controls_row2, controls_row3, fig.canvas])
+
+def ellipse_points(xc, yc, a, b, phi, n=400):
+    """
+    Parametric ellipse sampled at n points.
+    (xc, yc): center
+    a, b    : semi-axes (a = major, b = minor)
+    phi     : rotation (radians), from +x toward +y
+    """
+    t = np.linspace(0, 2*np.pi, n)
+    ct, st = np.cos(t), np.sin(t)
+    c, s = np.cos(phi), np.sin(phi)
+    x = xc + a*ct*c - b*st*s
+    y = yc + a*ct*s + b*st*c
+    return x, y
+
+def plot_ellipse_on_mask(mask, model, pts_xy=None, inliers=None, show_axes=True, title="Ellipse fit"):
+    """
+    mask   : 2D image (shown as background)
+    model  : skimage EllipseModel (after .estimate or RANSAC)
+    pts_xy : optional Nx2 array of (x,y) points used for fitting
+    inliers: optional boolean mask (same length as pts_xy) from RANSAC
+    """
+    xc, yc, a, b, phi = model.params
+    ex, ey = ellipse_points(xc, yc, a, b, phi)
+
+    plt.figure(figsize=(6,6))
+    plt.imshow(mask, cmap="gray", interpolation="nearest")  # origin='upper' (image-like)
+    
+    # plot points if provided
+    if pts_xy is not None:
+        if inliers is None:
+            plt.plot(pts_xy[:,0], pts_xy[:,1], '.', ms=2, alpha=0.4, label="points")
+        else:
+            plt.plot(pts_xy[~inliers,0], pts_xy[~inliers,1], '.', ms=2, alpha=0.2, label="outliers")
+            plt.plot(pts_xy[inliers,0],  pts_xy[inliers,1],  '.', ms=2, alpha=0.6, label="inliers")
+
+    # ellipse + center
+    plt.plot(ex, ey, '-', lw=2, label="fitted ellipse")
+    plt.scatter([xc], [yc], s=50, marker='+', label="center")
+
+    # draw major/minor axes
+    if show_axes:
+        major = np.array([a*np.cos(phi), a*np.sin(phi)])
+        minor = np.array([-b*np.sin(phi), b*np.cos(phi)])
+        c = np.array([xc, yc])
+        p1, p2 = c - major, c + major
+        p3, p4 = c - minor, c + minor
+        plt.plot([p1[0], p2[0]], [p1[1], p2[1]], '--', lw=1, label="major axis")
+        plt.plot([p3[0], p4[0]], [p3[1], p4[1]], '--', lw=1, label="minor axis")
+
+    plt.axis('equal')
+    plt.legend(loc='lower right', fontsize=8)
+    plt.title(title)
+    plt.tight_layout()
+    plt.show()
 
 
 
