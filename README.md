@@ -6,7 +6,6 @@ These notebooks provide reproducible examples for:
 1. **Electrode overhang assessment** - measuring overhang features in cylindrical cells to assess manufacturing quality.
 2. **Cylindrical cannister assessment** - measuring diameter, wall thickness, eccentricity and detecting denting in the cannister of a battery.
 3. **Cylindrical cell electrode winding assessment** - transforming 2D slices of cylindrical cells into polar coordinates (radial distance, angle) and fitting an ideal spiral to quantify deviations from the expected geometry.
-4. **Cracked particle analysis** - analyzing and comparing radial gray-level profiles in populations of cracked NMC particles, enabling population-level insights.  
 
 All notebooks include lightweight example datasets (cropped, 8-bit volumes) so they run quickly and out of the box.  
 
@@ -48,7 +47,6 @@ These notebooks require **Python ≥3.9**.
    - `01_cylindrical_cell_overhangs.ipynb`
    - `02_cylindrical_cell_can.ipynb`  
    - `03_cylindrical_cell_electrode_winding.ipynb`  
-   - `04_cracking_active_particles.ipynb`  
 
 3. Run all cells to reproduce the workflows. Each notebook generates example plots and figures.  
 
