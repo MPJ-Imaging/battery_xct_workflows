@@ -3,6 +3,7 @@ title: "battery_xct_workflows: Example Jupyter Notebooks for Quantitative Analys
 tags:
   - batteries
   - x-ray computed tomography
+  - quality assurance
   - image analysis
   - Jupyter notebooks
 authors:
@@ -67,6 +68,7 @@ The authors would like to acknowledge the open-source Python scientific ecosyste
 This work was carried out with funding from the Faraday Institution (faraday.ac.uk; EP/S003053/1), grant numbers, FIRG060 and FIRG066; and the EPSRC grant EP/M014045/1. M.P.J. and R.J. acknowledged Innovate UK for funding via the BATSEED Project (grant number: 10044823). PhD funding for H.C.W.P by the Faraday Institution was also acknowledged: EPSRC training grant number EP/S514901/1. 
 
 # References
+
 
 
 
