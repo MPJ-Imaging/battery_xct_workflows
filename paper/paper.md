@@ -39,7 +39,7 @@ This submission provides a set of open Jupyter notebooks that demonstrate analys
 
 - Quantifying electrode overhang using multiple geometric measures;
 - Measuring the canister (e.g., diameter, eccentricity) and detecting dents via ellipse fitting; and
-- Unrolling 2D slices of the electrode winding into polar coordinates [@kok2019virtual] and fitting an ideal spiral to quantify deviations from the expected winding pattern [@sun2025health].
+- Transforming 2D slices of the electrode winding into polar coordinates [@kok2019virtual] and fitting an ideal spiral to quantify deviations from the expected winding pattern [@sun2025health].
 
 Each workflow is implemented as a Jupyter notebook and bundled with example data (images and, where appropriate, segmentation masks) so it can be run without specialized preprocessing. The notebooks are written in Python and rely on widely used scientific libraries; NumPy [@harris2020numpy], SciPy [@virtanen2020scipy], scikit-image [@van2014scikit], Matplotlib [@hunter2007matplotlib], and scikit-learn [@pedregosa2011scikit]. All materials are archived with a Zenodo DOI to ensure long-term accessibility.
 
@@ -75,6 +75,7 @@ This work was carried out with funding from the Faraday Institution (faraday.ac.
 The authors used ChatGPT (OpenAI) to assist with language editing and code refactoring. All workflow logic, analyses, and interpretations were developed and verified by the authors, who bear full responsibility for the content.
 
 # References
+
 
 
 
