@@ -12,10 +12,10 @@ authors:
     affiliation: "1, 2"
   - name: Hamish T. Reid
     affiliation: "1, 2"
-  - name: Huw C. W. Parks
-    affiliation: "1, 2, 3"
   - name: Francesco Iacoviello
     affiliation: "1, 2"
+  - name: Paul R. Shearing
+  - affiliation: "3, 4"
   - name: Rhodri Jervis
     affiliation: "1, 2, 3"
 affiliations:
@@ -25,6 +25,8 @@ affiliations:
     index: 2
   - name: The Faraday Institution, Harwell Science and Innovation Campus, Didcot, UK
     index: 3
+  - name: The ZERO Institute, The University of Oxford, Oxon, UK
+    index: 4
 date: 2025-09-26                      # update on submit
 bibliography: paper.bib
 ---
@@ -68,11 +70,12 @@ Reliable battery QA is essential for performance, safety, and trust in Li-ion te
 
 X-ray Computed Tomography Data was acquired at **The UCL Centre for Correlative X-ray Microscopy**, London, UK. 
 
-This work was carried out with funding from the Faraday Institution (faraday.ac.uk; EP/S003053/1), grant numbers, FIRG060 and FIRG066; and the EPSRC grant EP/M014045/1. M.P.J. and R.J. acknowledged Innovate UK for funding via the BATSEED Project (grant number: 10044823). PhD funding for H.C.W.P by the Faraday Institution was also acknowledged via EPSRC training grant number EP/S514901/1.
+This work was carried out with funding from the Faraday Institution (faraday.ac.uk; EP/S003053/1), grant numbers, FIRG060 and FIRG066; and the EPSRC grant EP/M014045/1. M.P.J., P.R.S and R.J. acknowledged Innovate UK for funding via the BATSEED Project (grant number: 10044823).
 
-The authors used ChatGPT (OpenAI) to assist with language editing, Markdown documentation, and minor code refactoring. All workflow logic, analyses, results, and interpretations were performed and verified by the authors, who bear full responsibility for the content.
+The authors used ChatGPT (OpenAI) to assist with language editing and minor code refactoring. All workflow logic, analyses, and interpretations were developed and verified by the authors, who bear full responsibility for the content.
 
 # References
+
 
 
 
