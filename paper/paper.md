@@ -1,5 +1,5 @@
 ---
-title: "battery_xct_workflows: Open Jupyter Notebooks for Lithium-Ion Battery QA from XCT Data"
+title: "battery_xct_workflows: Open Jupyter Notebooks for Lithium-Ion Battery QA using XCT"
 tags:
   - batteries
   - x-ray computed tomography
@@ -75,6 +75,7 @@ This work was carried out with funding from the Faraday Institution (faraday.ac.
 The authors used ChatGPT (OpenAI) to assist with language editing and code refactoring. All workflow logic, analyses, and interpretations were developed and verified by the authors, who bear full responsibility for the content.
 
 # References
+
 
 
 
