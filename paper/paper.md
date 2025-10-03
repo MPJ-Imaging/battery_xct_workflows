@@ -57,7 +57,7 @@ This contribution meets this need as a set of open, complete, and reproducible a
 *Figure 1. (a) Slice through a cylindrical cell tomogram with overhang masks overlayed. (b) Distribution of overhang deflection angles in the analysed cell. Overhang faults can lead to increased lithium plating and eventually short circuits.*  
 
 ![Ellipse fitted to a radial slice of a Li-ion cylindrical cell](fig2.png)  
-*Figure 2. By fitting an ellipse to the cannister we can measure a range of quality metrics. For example, the fitted ellipse is used to calculate cannister eccentricity (a proxy for cannister deformation) and is also used to detect and measure dents (calculated as error with respect to the ellipse). Both deformation and denting of the cannister can lead to in-use safety issues.* 
+*Figure 2. By fitting an ellipse to the canister we can measure a range of quality metrics. For example, the fitted ellipse is used to calculate canister eccentricity (a proxy for canister deformation) and is also used to detect and measure dents (calculated as error with respect to the ellipse). Both deformation and denting of the canister can lead to in-use safety issues.* 
 
 ![Unrolled cylindrical cell slice into polar coordinates with deviation (MaxAE) from a fitted spiral used to detect buckling.](fig3.png)  
 *Figure 3. Cylindrical cell slice unrolled into polar coordinates and showing maximum absolute error (MaxAE) from a fitted spiral to detect buckling. In this case large buckles are detected in the central layers of the cell (layers 2 -4). Buckling is known to negatively effect capacity and is a known indicator of poor cell health.*  
@@ -75,6 +75,7 @@ This work was carried out with funding from the Faraday Institution (faraday.ac.
 The authors used ChatGPT (OpenAI) to assist with language editing and code refactoring. All workflow logic, analyses, and interpretations were developed and verified by the authors, who bear full responsibility for the content.
 
 # References
+
 
 
 
