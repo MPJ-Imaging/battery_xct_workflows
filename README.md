@@ -13,19 +13,16 @@ All notebooks include lightweight example datasets (cropped, 8-bit volumes) so t
 
 ## Cloud Hosting
 
-These notebooks can be run in **binder** or **google colab** (links below). Simply run all cells to reproduce the workflows. Each notebook generates example plots and figures.
+These notebooks can be run in **binder** (links below). Simply run all cells to reproduce the workflows. Each notebook generates example plots and figures.
 
 - `01_cylindrical_cell_overhangs.ipynb`  
-  [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MPJ-Imaging/battery_xct_workflows/HEAD?labpath=notebooks/01_cylindrical_cell_overhangs.ipynb)  
-  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MPJ-Imaging/battery_xct_workflows/blob/HEAD/notebooks/01_cylindrical_cell_overhangs.ipynb)  
+  [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MPJ-Imaging/battery_xct_workflows/HEAD?labpath=notebooks/01_cylindrical_cell_overhangs.ipynb)   
 
 - `02_cylindrical_cell_can.ipynb`  
-  [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MPJ-Imaging/battery_xct_workflows/HEAD?labpath=notebooks/02_cylindrical_cell_can.ipynb)  
-  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MPJ-Imaging/battery_xct_workflows/blob/HEAD/notebooks/02_cylindrical_cell_can.ipynb)  
+  [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MPJ-Imaging/battery_xct_workflows/HEAD?labpath=notebooks/02_cylindrical_cell_can.ipynb)   
 
 - `03_cylindrical_cell_electrode_winding.ipynb`  
   [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MPJ-Imaging/battery_xct_workflows/HEAD?labpath=notebooks/03_cylindrical_cell_electrode_winding.ipynb)  
-  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MPJ-Imaging/battery_xct_workflows/blob/HEAD/notebooks/03_cylindrical_cell_electrode_winding.ipynb)  
 
 ---
 
