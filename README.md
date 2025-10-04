@@ -31,7 +31,7 @@ These notebooks can be run in **binder** or **google colab** (links below). Simp
 
 ## Installation  
 
-These notebooks require **Python ≥3.9** or can be run in **binder** or **google colab** (links below)
+These notebooks require **Python ≥3.9**. Follow steps below to run locally.
 
 1. Clone the repository:  
    ```bash
