@@ -11,7 +11,7 @@ All notebooks include lightweight example datasets (cropped, 8-bit volumes) so t
 
 ---
 
-## Cloud Hosting
+## Cloud Notebooks
 
 These notebooks can be run in **binder** (links below). Simply run all cells to reproduce the workflows. Each notebook generates example plots and figures.
 
