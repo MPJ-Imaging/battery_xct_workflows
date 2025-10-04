@@ -13,7 +13,7 @@ All notebooks include lightweight example datasets (cropped, 8-bit volumes) so t
 
 ## Installation  
 
-These notebooks require **Python ≥3.9** or can be run in Binder (see below)
+These notebooks require **Python ≥3.9** or can be run in **binder** (links below)
 
 1. Clone the repository:  
    ```bash
