@@ -13,7 +13,7 @@ All notebooks include lightweight example datasets (cropped, 8-bit volumes) so t
 
 ## Installation  
 
-These notebooks require **Python ≥3.9** or can be run in **binder** (links below)
+These notebooks require **Python ≥3.9** or can be run in **binder** or **google colab** (links below)
 
 1. Clone the repository:  
    ```bash
@@ -58,7 +58,7 @@ These notebooks require **Python ≥3.9** or can be run in **binder** (links bel
   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MPJ-Imaging/battery_xct_workflows/blob/HEAD/notebooks/03_cylindrical_cell_electrode_winding.ipynb)  
 
 3. Run all cells to reproduce the workflows. Each notebook generates example plots and figures.
-4. Alternatively, launch the notebooks in your browser using **binder** or **google colab**(links above)
+4. Alternatively, launch the notebooks in your browser using **binder** or **google colab** (links above)
 
 ---
 
