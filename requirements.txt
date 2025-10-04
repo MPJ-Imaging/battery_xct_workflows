@@ -13,6 +13,7 @@ SimpleITK
 scikit-learn
 
 # Widgets and notebook utilities
+ipympl
 ipywidgets
 tqdm
 IPython
@@ -24,3 +25,4 @@ edt   # Euclidean distance transform library
 # Optional but useful for robust installs
 # jupyterlab>=4.0
 # notebook>=7.0
+
