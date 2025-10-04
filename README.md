@@ -49,7 +49,7 @@ These notebooks require **Python ≥3.9** or can be run in Binder (see below)
    - `03_cylindrical_cell_electrode_winding.ipynb` [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MPJ-Imaging/battery_xct_workflows/HEAD?labpath=notebooks/01_cylindrical_cell_winding.ipynb)
 
 3. Run all cells to reproduce the workflows. Each notebook generates example plots and figures.
-4. Alternatively, launch the notebooks in your browser using Binder (links above)
+4. Alternatively, launch the notebooks in your browser using **binder** (links above)
 
 ---
 
