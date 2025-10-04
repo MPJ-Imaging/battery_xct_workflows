@@ -1,0 +1,23 @@
+name: Run notebooks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt jupyter nbconvert
+      - name: Execute notebooks
+        run: |
+          jupyter nbconvert --to notebook --inplace --execute notebooks/01_cylindrical_cell_overhangs.ipynb
+          jupyter nbconvert --to notebook --inplace --execute notebooks/02_cylindrical_cell_can.ipynb
+          jupyter nbconvert --to notebook --inplace --execute notebooks/03_cylindrical_cell_electrode_winding.ipynb
