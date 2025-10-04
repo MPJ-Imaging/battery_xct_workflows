@@ -15,9 +15,9 @@ All notebooks include lightweight example datasets (cropped, 8-bit volumes) so t
 
 These notebooks require **Python ≥3.9**.
 0. Launch Notebooks in Binder
-   ```bash
-   [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MPJ-Imaging/battery_xct_workflows/HEAD?labpath=notebooks/01_cylindrical_cell_overhangs.ipynb)
-   ```
+
+[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MPJ-Imaging/battery_xct_workflows/HEAD?labpath=notebooks/01_cylindrical_cell_overhangs.ipynb)
+
 OR
 
 1. Clone the repository:  
