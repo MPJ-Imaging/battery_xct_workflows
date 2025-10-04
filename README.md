@@ -13,12 +13,7 @@ All notebooks include lightweight example datasets (cropped, 8-bit volumes) so t
 
 ## Installation  
 
-These notebooks require **Python ≥3.9**.
-0. Launch Notebooks in Binder
-
-[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MPJ-Imaging/battery_xct_workflows/HEAD?labpath=notebooks/01_cylindrical_cell_overhangs.ipynb)
-
-OR
+These notebooks require **Python ≥3.9** or can be run in Binder (see below)
 
 1. Clone the repository:  
    ```bash
@@ -53,7 +48,14 @@ OR
    - `02_cylindrical_cell_can.ipynb`  
    - `03_cylindrical_cell_electrode_winding.ipynb`  
 
-3. Run all cells to reproduce the workflows. Each notebook generates example plots and figures.  
+3. Run all cells to reproduce the workflows. Each notebook generates example plots and figures.
+
+OR
+
+4. Launch the notebooks in Binder:
+   - `01_cylindrical_cell_overhangs.ipynb` [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MPJ-Imaging/battery_xct_workflows/HEAD?labpath=notebooks/01_cylindrical_cell_overhangs.ipynb)
+   - `02_cylindrical_cell_can.ipynb` [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MPJ-Imaging/battery_xct_workflows/HEAD?labpath=notebooks/01_cylindrical_cell_can.ipynb)
+   - `03_cylindrical_cell_electrode_winding.ipynb` [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MPJ-Imaging/battery_xct_workflows/HEAD?labpath=notebooks/01_cylindrical_cell_winding.ipynb)
 
 ---
 
