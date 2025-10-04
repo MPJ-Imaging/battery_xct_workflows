@@ -1,3 +1,5 @@
+[![Run notebooks](https://github.com/MPJ-Imaging/battery_xct_workflows/actions/workflows/run-notebooks.yml/badge.svg)](https://github.com/MPJ-Imaging/battery_xct_workflows/actions/workflows/run-notebooks.yml)
+
 # Battery XCT Workflows  
 
 A collection of open Jupyter notebooks demonstrating **quantitative quality assessment workflows for X-ray computed tomography (XCT)** data of lithium-ion cylindrical cells.  
