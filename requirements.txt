@@ -7,7 +7,6 @@ matplotlib
 # Image I/O and processing
 tifffile
 scikit-image
-SimpleITK
 
 # Machine learning / statistics
 scikit-learn
@@ -20,9 +19,9 @@ IPython
 
 # Parallelization and extra utilities
 joblib
-edt   # Euclidean distance transform library
 
 # Optional but useful for robust installs
 # jupyterlab>=4.0
 # notebook>=7.0
+
 
