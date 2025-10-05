@@ -30,7 +30,7 @@ These notebooks can be run from your browser via **binder** (links below). Simpl
 
 ## Installation  
 
-These notebooks require **Python ≥3.9**. Follow steps below to install and run locally.
+These notebooks require **Python ≥3.9**. Follow the steps below to install and run locally.
 
 1. Clone the repository:  
    ```bash
