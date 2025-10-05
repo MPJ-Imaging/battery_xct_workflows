@@ -33,7 +33,7 @@ bibliography: paper.bib
 
 # Summary
 
-X-ray computed tomography (XCT) enables non-destructive, 3D visualization of lithium-ion (Li-ion) battery components and microstructure. At the cell level, XCT is especially useful for detecting manufacturing and quality issues in Li-ion cells [@attia2025challenges]. However, turning XCT images into quantitative and reproducible quality assurane (QA) requires custom analysis pipelines that are rarely shared openly.
+X-ray computed tomography (XCT) enables non-destructive, 3D visualization of lithium-ion (Li-ion) battery components and microstructure. At the cell level, XCT is especially useful for detecting manufacturing and quality issues in Li-ion cells [@attia2025challenges]. However, turning XCT images into quantitative and reproducible quality assurance (QA) requires custom analysis pipelines that are rarely shared openly.
 
 This submission provides a set of open Jupyter notebooks that demonstrate analysis workflows for battery XCT data. The workflows target three critical QA tasks relevant to Li-ion cylindrical cells:
 
@@ -75,6 +75,7 @@ This work was carried out with funding from the Faraday Institution (faraday.ac.
 ChatGPT (OpenAI) was used to assist with language editing and code refactoring. All workflow logic, analyses, and interpretations were developed and verified by the authors, who bear full responsibility for the content.
 
 # References
+
 
 
 
