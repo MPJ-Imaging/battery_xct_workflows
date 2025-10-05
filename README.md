@@ -6,8 +6,8 @@ A collection of open Jupyter notebooks demonstrating **quality assessment workfl
 
 These notebooks provide reproducible examples for:  
 1. **Electrode overhang assessment** - measuring overhang features in cylindrical cells to assess manufacturing quality.
-2. **Cylindrical canister assessment** - measuring diameter, wall thickness, eccentricity and detecting denting in the canister of a battery.
-3. **Cylindrical cell electrode winding assessment** - transforming 2D slices of cylindrical cells into polar coordinates (radial distance, angle) and fitting an ideal spiral to quantify deviations from the expected geometry.
+2. **Battery canister assessment** - measuring diameter, wall thickness, eccentricity and detecting denting in the canister of a Li-ion cylindrical cell.
+3. **Electrode winding assessment** - transforming 2D slices of cylindrical cell electrode winding into polar coordinates (radial distance, angle) and fitting an ideal spiral to quantify deviations from the expected geometry.
 
 All notebooks include lightweight example datasets (cropped, 8-bit volumes) so they run quickly and out of the box.  
 
