@@ -71,9 +71,9 @@ These notebooks require **Python ≥3.9**. Follow steps below to install and run
 - Larger original datasets are not necessary for reproducing the examples.  
 - Figures in the accompanying paper are generated from these reduced datasets.
 
----
-
 ## License  
 
 This project is licensed under the terms of the [MIT License](LICENSE).  
+
+---
 
