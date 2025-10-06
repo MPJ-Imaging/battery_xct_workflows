@@ -65,6 +65,10 @@ These notebooks require **Python ≥3.9**. Follow the steps below to install and
 
 ---
 
+## Citation
+
+If you used these notebooks in your work please cite the Zenodo repo [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17280289.svg)](https://doi.org/10.5281/zenodo.17280289)
+
 ## Data availability  
 
 - This repo includes **lightweight volumes and images** (by XCT standards) in `data/` so notebooks run out of the box.  
