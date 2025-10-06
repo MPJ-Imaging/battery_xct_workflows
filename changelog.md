@@ -8,3 +8,8 @@
 - 'Run Notebooks' workflow test
 - Passed
 - Added Badge
+## [1.0.1] - 2025-10-06
+### Fixed
+- Zenodo metadata now provided via `.zenodo.json` (authors/affiliations).
+### Notes
+- No code changes; documentation/metadata only.
