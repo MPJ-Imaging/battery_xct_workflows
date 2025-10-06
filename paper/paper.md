@@ -41,7 +41,7 @@ This submission provides a set of open Jupyter notebooks that demonstrate analys
 - Measuring the canister (e.g., diameter, eccentricity) and detecting dents via ellipse fitting; and
 - Transforming 2D slices of the electrode winding into polar coordinates [@kok2019virtual] and fitting an ideal spiral to quantify deviations from the expected winding pattern [@sun2025health].
 
-Each workflow is implemented as a Jupyter notebook and bundled with example data (images and, where appropriate, segmentation masks) so it can be run without specialized preprocessing. The notebooks are written in Python and rely on widely used scientific libraries; NumPy [@harris2020numpy], SciPy [@virtanen2020scipy], scikit-image [@van2014scikit], Matplotlib [@hunter2007matplotlib], and scikit-learn [@pedregosa2011scikit]. For ease of access, all notebooks can also be launched directly in the browser via Binder, requiring no local installation. All materials are archived with a Zenodo DOI to ensure long-term accessibility.
+Each workflow is implemented as a Jupyter notebook and bundled with example data (images and, where appropriate, segmentation masks) so it can be run without specialized preprocessing. The notebooks are written in Python and rely on widely used scientific libraries; NumPy [@harris2020numpy], SciPy [@virtanen2020scipy], scikit-image [@van2014scikit], Matplotlib [@hunter2007matplotlib], and scikit-learn [@pedregosa2011scikit]. For ease of access, all notebooks can also be launched directly in the browser via Binder, requiring no local installation. All materials are archived with a Zenodo DOI to ensure long-term accessibility [@jones2025batteryxctworkflows].
 
 By lowering the barrier to quantitative XCT analysis, these notebooks promote transparent, reproducible practice in battery science and provide adaptable templates for related problems in tomography and X-ray imaging.
 
@@ -75,6 +75,7 @@ This work was carried out with funding from the Faraday Institution (faraday.ac.
 ChatGPT (OpenAI) was used to assist with language editing and code refactoring. All workflow logic, analyses, and interpretations were developed and verified by the authors, who bear full responsibility for the content.
 
 # References
+
 
 
 
