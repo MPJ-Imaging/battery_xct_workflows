@@ -1,6 +1,6 @@
 {
   "title": "battery_xct_workflows: Open Jupyter Notebooks for Lithium-Ion Battery QA using XCT",
-  "description": "A collection of open, reproducible Jupyter notebooks for quantitative analysis and quality assurance of lithium-ion batteries using X-ray computed tomography (XCT). The workflows include electrode overhang analysis, unrolling of cylindrical jelly-roll structures into polar coordinates, and grey-level profiling of cathode particles.",
+  "description": "A collection of open, reproducible Jupyter notebooks for quantitative analysis and quality assurance of lithium-ion batteries using X-ray computed tomography (XCT). The workflows include electrode overhang analysis, battery canister assesment, and unrolling of cylindrical jelly-roll structures into polar coordinates for quality assurance.",
   "creators": [
     {
       "name": "Jones, Matthew P.",
