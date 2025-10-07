@@ -49,7 +49,7 @@ By lowering the barrier to quantitative XCT analysis, these notebooks promote tr
 
 Although XCT is increasingly used to visualize battery structures and assess manufacturing quality, reproducible analysis workflows remain scarce. New users often stop at qualitative inspection, and many groups depend on proprietary software with limited documentation. This fragmentation complicates comparisons across studies and slows the adoption of best practices.
 
-This contribution meets this need as a set of open, complete, and reproducible analysis workflows rather than a standalone software library. Because XCT analysis typically involves iterative exploration, visualization, and interpretation, Jupyter notebooks are a natural format: they combine executable code, results, and narrative explanation in one place [@kluyver2016jupyter]. By sharing these notebooks, we aim to make quantitative XCT analysis easier to understand, adapt, and extend in both battery research and the broader tomography community.
+This contribution meets this need as a set of open and reproducible analysis workflows rather than a standalone software library. Because XCT analysis typically involves iterative exploration, visualization, and interpretation, Jupyter notebooks are a natural format: they combine executable code, results, and narrative explanation in one place [@kluyver2016jupyter]. By sharing these notebooks, we aim to make quantitative XCT analysis easier to understand, adapt, and extend in both battery research and the broader tomography community.
 
 # Illustrative outputs
 
