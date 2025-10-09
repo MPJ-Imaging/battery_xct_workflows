@@ -1,24 +1,10 @@
-##########################################################################################
-
-# Unrolling
-
-##########################################################################################
-# Functions designed for 'unrolling' a binary mask of a spiral into polar co-ordinates 
-# measuring winding quality, and deformations.
-##########################################################################################
-# V1.0.0
-# Date: 2025-09-30
-##########################################################################################
-# Author: Matthew Jones
-##########################################################################################
-
 import numpy as np 
 import pandas as pd
 import matplotlib.pyplot as plt
 from typing import Sequence, Tuple, Union, Mapping, Optional
 from scipy.ndimage import center_of_mass as c_of_m
 from scipy.ndimage import distance_transform_edt as dist_trans
-from skimage.measure import label as label
+from skimage.measure import label, find_contours, EllipseModel, ransac
 from sklearn.linear_model import LinearRegression
 
 
@@ -39,8 +25,8 @@ def virtual_unroll(
     CoM : tuple of float, sequence of float, or numpy.ndarray, optional
         Center of mass (y, x) used as the spiral origin. Accepts:
         - A length-2 tuple/list/array giving (y, x).
-        - A 2D array mask (same shape as `seg`) from which center of mass will be computed
-          via `c_of_m`.
+        - A 2D array mask (same shape as `seg`, i.e. the casing mask) from which center of mass will be computed
+          via fitting an ellipse to the outer pixels.
         - If None (default), the center is computed from `seg` via `c_of_m(seg)`.
         The final center is cast to integer pixel indices (subpixels are discarded).
     chunk_size : int, optional
@@ -86,7 +72,19 @@ def virtual_unroll(
         if arr.ndim == 1 and arr.size == 2:
             com = (float(arr[0]), float(arr[1]))
         elif arr.ndim == 2 and arr.shape == seg_bool.shape:
-            com = c_of_m(arr)
+            contours = find_contours((arr).astype(float), 0.5)
+            outer = max(contours, key=lambda c: 0.5*np.abs(np.sum(c[:,1]*np.roll(c[:,0],-1) - c[:,0]*np.roll(c[:,1],-1))))
+            pts_xy = np.column_stack([outer[:,1], outer[:,0]])  # (x,y)
+
+            model, inliers = ransac(
+                pts_xy,
+                EllipseModel,
+                min_samples=5,
+                residual_threshold=1.0,   
+                max_trials=2000)
+            
+            xc, yc, a, b, phi = model.params
+            com = (yc, xc)
         else:
             raise ValueError(
                 "`CoM` must be length-2 (y, x) or a 2D mask of the same shape as `seg`."
