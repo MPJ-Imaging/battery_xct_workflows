@@ -12,10 +12,14 @@ authors:
     affiliation: "1, 2"
   - name: Hamish T. Reid
     affiliation: "1, 2"
+  - name: Robert S. Young
+    affiliation: "1, 3"
+  - name: Matt D. R. Kok
+    affiliation: "5"
   - name: Francesco Iacoviello
     affiliation: "1, 2"
   - name: Paul R. Shearing
-    affiliation: "3, 4"
+    affiliation: "3, 4, 5"
   - name: Rhodri Jervis
     affiliation: "1, 2, 3"
 affiliations:
@@ -27,6 +31,8 @@ affiliations:
     index: 3
   - name: The ZERO Institute, The University of Oxford, Oxon, UK
     index: 4
+  - name: Sention Technologies, Kings House, 9 - 10 Haymarket, London, UK
+    index: 5
 date: 2025-09-26                      # update on submit
 bibliography: paper.bib
 ---
@@ -70,11 +76,12 @@ Reliable battery QA is essential for performance, safety, and trust in Li-ion te
 
 X-ray Computed Tomography Data was acquired at **The UCL Centre for Correlative X-ray Microscopy**, London, UK. 
 
-This work was carried out with funding from the Faraday Institution (faraday.ac.uk; EP/S003053/1), grant numbers, FIRG060 and FIRG066; and the EPSRC grant EP/M014045/1. H.T.R. acknowledged Innovate UK and the Aerospace Technology Institute for funding through the CEBD programme. M.P.J., P.R.S. and R.J. acknowledged Innovate UK for funding via the BATSEED Project (grant number: 10044823).
+This work was carried out with funding from the Faraday Institution (faraday.ac.uk; EP/S003053/1), grant numbers, FIRG060 and FIRG066; and the EPSRC grant EP/M014045/1. H.T.R. acknowledges Innovate UK and the Aerospace Technology Institute for funding through the CEBD programme. M.P.J., P.R.S. and R.J. acknowledge Innovate UK for funding via the BATSEED Project (grant number: 10044823).
 
 ChatGPT (OpenAI) was used to assist with language editing and code refactoring. All software, logic, and analyses were developed by the authors, who bear full responsibility for the content.
 
 # References
+
 
 
 
