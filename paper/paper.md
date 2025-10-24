@@ -19,7 +19,7 @@ authors:
   - name: Francesco Iacoviello
     affiliation: "1, 2"
   - name: Paul R. Shearing
-    affiliation: "3, 4, 5"
+    affiliation: "3, 4"
   - name: Rhodri Jervis
     affiliation: "1, 2, 3"
 affiliations:
@@ -81,6 +81,7 @@ This work was carried out with funding from the Faraday Institution (faraday.ac.
 ChatGPT (OpenAI) was used to assist with language editing. All software, logic, and analyses were developed by the authors, who bear full responsibility for the content.
 
 # References
+
 
 
 
