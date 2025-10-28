@@ -5,10 +5,10 @@
 A collection of open Jupyter notebooks demonstrating **quality assessment workflows** for lithium-ion battery cylindrical cells with X-ray Computed Tomography (XCT).  
 
 These notebooks provide reproducible examples for:  
-1. **Electrode overhang analysis** - measuring overhang features in cylindrical cells to assess manufacturing quality.
-2. **Battery canister analysis** - measuring diameter, wall thickness, eccentricity and detecting denting in the canister of a Li-ion cylindrical cell.
-3. **Electrode winding analysis** - transforming 2D slices of cylindrical cell electrode winding into polar coordinates (radial distance, angle) and fitting an ideal spiral to quantify deviations from the expected geometry.
-4. **Example battery segmentations** - example segmentations of the electrode winding and overhangs using machine learning and classic CV methods. 
+1. **Cylindrical cell electrode overhang analysis** - measuring overhang features in cylindrical cells to assess manufacturing quality.
+2. **Cylindrical cell canister analysis** - measuring diameter, wall thickness, eccentricity and detecting denting in the canister of a Li-ion cylindrical cell.
+3. **Cylindrical cell winding analysis** - transforming 2D slices of cylindrical cell electrode winding into polar coordinates (radial distance, angle) and fitting an ideal spiral to quantify deviations from the expected geometry.
+4. **Example cylindrical cell segmentations** - example segmentations of the electrode winding and overhangs using machine learning and classic CV methods. 
 
 All notebooks include lightweight example datasets (cropped, 8-bit volumes) so they run quickly and out of the box.  
 
