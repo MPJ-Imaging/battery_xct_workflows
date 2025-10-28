@@ -76,13 +76,14 @@ Reliable battery QA is essential for performance, safety, and trust in Li-ion te
 
 # Acknowledgements
 
-X-ray Computed Tomography Data was acquired at **The UCL Centre for Correlative X-ray Microscopy**, London, UK. 
+X-ray Computed Tomography Data was acquired at **The UCL Centre for Correlative X-ray Microscopy** who are supported by the NXCT via EPSRC grant EP/T02593X/1. 
 
 This work was carried out with funding from the Faraday Institution (faraday.ac.uk; EP/S003053/1), grant numbers, FIRG060 and FIRG066; and the EPSRC grant EP/M014045/1. H.T.R. and J.B.R. acknowledge Innovate UK and the Aerospace Technology Institute for funding through the CEBD programme (10050803). M.P.J., P.R.S. and R.J. acknowledge Innovate UK for funding via the BATSEED Project (grant number: 10044823).
 
 ChatGPT (OpenAI) was used to assist with language editing. All software, logic, and analyses were developed by the authors, who bear full responsibility for the content.
 
 # References
+
 
 
 
