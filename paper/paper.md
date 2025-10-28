@@ -18,6 +18,8 @@ authors:
     affiliation: "5"
   - name: Francesco Iacoviello
     affiliation: "1, 2"
+  - name: James B. Robinson
+    affiliation: "1, 2, 3"  
   - name: Paul R. Shearing
     affiliation: "3, 4"
   - name: Rhodri Jervis
@@ -76,11 +78,12 @@ Reliable battery QA is essential for performance, safety, and trust in Li-ion te
 
 X-ray Computed Tomography Data was acquired at **The UCL Centre for Correlative X-ray Microscopy**, London, UK. 
 
-This work was carried out with funding from the Faraday Institution (faraday.ac.uk; EP/S003053/1), grant numbers, FIRG060 and FIRG066; and the EPSRC grant EP/M014045/1. H.T.R. acknowledges Innovate UK and the Aerospace Technology Institute for funding through the CEBD programme. M.P.J., P.R.S. and R.J. acknowledge Innovate UK for funding via the BATSEED Project (grant number: 10044823).
+This work was carried out with funding from the Faraday Institution (faraday.ac.uk; EP/S003053/1), grant numbers, FIRG060 and FIRG066; and the EPSRC grant EP/M014045/1. H.T.R. and J.B.R. acknowledge Innovate UK and the Aerospace Technology Institute for funding through the CEBD programme (10050803). M.P.J., P.R.S. and R.J. acknowledge Innovate UK for funding via the BATSEED Project (grant number: 10044823).
 
 ChatGPT (OpenAI) was used to assist with language editing. All software, logic, and analyses were developed by the authors, who bear full responsibility for the content.
 
 # References
+
 
 
 
