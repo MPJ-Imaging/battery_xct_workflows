@@ -73,7 +73,8 @@ If you used these notebooks in your work please cite the Zenodo repo!
 
 ## Data availability  
 
-- This repo includes **lightweight volumes and images** (by XCT standards) in `data/` so notebooks run out of the box.  
+- This repo includes **lightweight volumes and images** (by XCT standards) in `data/` so notebooks run out of the box.
+- Associated machine learning models are available via linked Zenodo repo's.   
 - Larger original datasets are not necessary for reproducing the examples.  
 - Figures in the accompanying paper are generated from these reduced datasets.
 
