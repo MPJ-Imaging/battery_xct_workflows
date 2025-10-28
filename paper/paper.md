@@ -41,19 +41,18 @@ bibliography: paper.bib
 
 X-ray computed tomography (XCT) enables non-destructive, 3D visualization of lithium-ion (Li-ion) battery components and microstructure. At the cell level, XCT is especially useful for detecting manufacturing and quality issues in Li-ion cells [@attia2025challenges]. However, turning XCT images into quantitative and reproducible quality assurance (QA) requires custom analysis pipelines that are rarely shared openly.
 
-This submission provides a set of open Jupyter notebooks that demonstrate analysis workflows for battery XCT data. The workflows target three critical QA tasks relevant to Li-ion cylindrical cells:
+This submission provides a set of open Jupyter notebooks that demonstrate analysis workflows for battery XCT data. The workflows target three critical QA tasks relevant to Li-ion cylindrical cells with the fourth notebook demonstrating relavent image segmentation approaches:
 
 - Quantifying electrode overhang using multiple geometric measures;
 - Measuring the canister (e.g., diameter, eccentricity) and detecting dents via ellipse fitting; and
 - Transforming 2D slices of the electrode winding into polar coordinates [@kok2019virtual] and fitting an ideal spiral to quantify deviations from the expected winding pattern [@sun2025health].
+- Example segmentations using machine learning (ML) and classic computer vision (CV) approaches to segment electrode winding and overhangs.
 
-Each workflow is implemented as a Jupyter notebook and bundled with example data (images and, where appropriate, segmentation masks) so it can be run without specialized preprocessing. The notebooks are written in Python and rely on widely used scientific libraries; NumPy [@harris2020numpy], SciPy [@virtanen2020scipy], scikit-image [@van2014scikit], Matplotlib [@hunter2007matplotlib], and scikit-learn [@pedregosa2011scikit]. For ease of access, all notebooks can also be launched directly in the browser via Binder, requiring no local installation. All materials are archived with a Zenodo DOI to ensure long-term accessibility [@jones2025batteryxctworkflows].
-
-By lowering the barrier to quantitative XCT analysis, these notebooks promote transparent, reproducible practice in battery science and provide adaptable templates for related problems in tomography and X-ray imaging.
+Each workflow is implemented as a Jupyter notebook and bundled with example data (images and, where appropriate, segmentation masks) so it can be run without specialized preprocessing. The notebooks are written in Python and rely on widely used scientific libraries; NumPy [@harris2020numpy], SciPy [@virtanen2020scipy], scikit-image [@van2014scikit], Matplotlib [@hunter2007matplotlib], and scikit-learn [@pedregosa2011scikit]. For ease of access, all notebooks can also be launched directly in the browser via Binder, requiring no local installation. All materials are archived with a Zenodo DOI to ensure long-term accessibility [@jones2025batteryxctworkflows]. By lowering the barrier to quantitative XCT analysis, these notebooks promote transparent, reproducible practice in battery science and provide adaptable templates for related problems in tomography and X-ray imaging.
 
 # Statement of need
 
-Although XCT is increasingly used to visualize battery structures and assess manufacturing quality, reproducible analysis workflows remain scarce. New users often stop at qualitative inspection, and many groups depend on proprietary software with limited documentation. This fragmentation complicates comparisons across studies and slows the adoption of best practices.
+Although XCT is increasingly used to visualize battery structures and assess manufacturing quality, reproducible analysis workflows remain scarce. New users often stop at qualitative inspection, and many depend on proprietary software with limited documentation. This fragmentation complicates comparisons across studies and slows the adoption of best practices.
 
 This contribution meets this need as a set of open and reproducible analysis workflows rather than a standalone software library. Because XCT analysis typically involves iterative exploration, visualization, and interpretation, Jupyter notebooks are a natural format: they combine executable code, results, and narrative explanation in one place [@kluyver2016jupyter]. By sharing these notebooks, we aim to make quantitative XCT analysis easier to understand, adapt, and extend in both battery research and the broader tomography community.
 
@@ -70,7 +69,7 @@ This contribution meets this need as a set of open and reproducible analysis wor
 
 # Conclusion
 
-Reliable battery QA is essential for performance, safety, and trust in Li-ion technologies, and XCT is a key tool for observing defects before they become failures [@attia2025challenges]. However, without open, shareable analysis pipelines, XCT results are difficult to compare or reproduce across labs and products. `battery_xct_workflows` addresses this gap by providing examples for the three most common cylindrical cell QA tasks performed with XCT; overhang quantification, canister metrology (including dent detection), and electrode winding analysis. By packaging runnable code, data, and narrative in one place, these workflows lower the barrier to quantitative XCT analysis. We hope this resource will seed a community of practice around open battery QA, with future extensions to additional cell formats, uncertainty reporting, and integration into automated testing pipelines.
+Reliable battery QA is essential for performance, safety, and trust in Li-ion technologies, and XCT is a key tool for observing defects before they become failures [@attia2025challenges]. However, without open, shareable analysis pipelines, XCT results are difficult to compare or reproduce across labs and products. `battery_xct_workflows` addresses this gap by providing examples for common cylindrical cell QA tasks performed with XCT; overhang quantification, canister metrology (including dent detection), and electrode winding analysis. Example segmentation methods are also demonstrated using both ML and classic CV approaches. By packaging runnable code, data, and narrative in one place, these workflows lower the barrier to quantitative XCT analysis. We hope this resource will seed a community of practice around open battery QA, with future extensions to additional cell formats (pouch cells, prismatic cells), uncertainty reporting, and integration into automated testing pipelines.
 
 # Acknowledgements
 
@@ -81,6 +80,7 @@ This work was carried out with funding from the Faraday Institution (faraday.ac.
 ChatGPT (OpenAI) was used to assist with language editing. All software, logic, and analyses were developed by the authors, who bear full responsibility for the content.
 
 # References
+
 
 
 
