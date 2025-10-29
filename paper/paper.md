@@ -81,7 +81,12 @@ This work was carried out with funding from the Faraday Institution (faraday.ac.
 
 ChatGPT (OpenAI) was used to assist with language editing. All software, logic, and analyses were developed by the authors, who bear full responsibility for the content.
 
+# Competing Interests
+
+Co-author Matt D. R. Kok is affiliated with Sention Technologies Limited, a company with potential commercial interest in applications related to this study. The company was not involved in the research presented.
+
 # References
+
 
 
 
