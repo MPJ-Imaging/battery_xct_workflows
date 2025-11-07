@@ -5,9 +5,10 @@
 A collection of open Jupyter notebooks demonstrating **quality assessment workflows** for lithium-ion battery cylindrical cells with X-ray Computed Tomography (XCT).  
 
 These notebooks provide reproducible examples for:  
-1. **Electrode overhang assessment** - measuring overhang features in cylindrical cells to assess manufacturing quality.
-2. **Battery canister assessment** - measuring diameter, wall thickness, eccentricity and detecting denting in the canister of a Li-ion cylindrical cell.
-3. **Electrode winding assessment** - transforming 2D slices of cylindrical cell electrode winding into polar coordinates (radial distance, angle) and fitting an ideal spiral to quantify deviations from the expected geometry.
+1. **Cylindrical cell electrode overhang analysis** - measuring overhang features in cylindrical cells to assess manufacturing quality.
+2. **Cylindrical cell canister analysis** - measuring diameter, wall thickness, eccentricity and detecting denting in the canister of a Li-ion cylindrical cell.
+3. **Cylindrical cell winding analysis** - transforming 2D slices of cylindrical cell electrode winding into polar coordinates (radial distance, angle) and fitting an ideal spiral to quantify deviations from the expected geometry.
+4. **Example cylindrical cell segmentations** - example segmentations of the electrode winding and overhangs using machine learning and classic CV methods. 
 
 All notebooks include lightweight example datasets (cropped, 8-bit volumes) so they run quickly and out of the box.  
 
@@ -24,8 +25,11 @@ These notebooks can be run from your browser via **binder** (links below). Simpl
   [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MPJ-Imaging/battery_xct_workflows/HEAD?labpath=notebooks/02_cylindrical_cell_can.ipynb)   
 
 - `03_cylindrical_cell_electrode_winding.ipynb`  
-  [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MPJ-Imaging/battery_xct_workflows/HEAD?labpath=notebooks/03_cylindrical_cell_electrode_winding.ipynb)  
+  [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MPJ-Imaging/battery_xct_workflows/HEAD?labpath=notebooks/03_cylindrical_cell_electrode_winding.ipynb)
 
+- `04_cylindrical_cell_segmentation.ipynb`  
+  [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MPJ-Imaging/battery_xct_workflows/HEAD?labpath=notebooks/04_cylindrical_cell_segmentation.ipynb)
+  
 ---
 
 ## Installation  
@@ -73,7 +77,8 @@ If you used these notebooks in your work please cite the Zenodo repo!
 
 ## Data availability  
 
-- This repo includes **lightweight volumes and images** (by XCT standards) in `data/` so notebooks run out of the box.  
+- This repo includes **lightweight volumes and images** (by XCT standards) in `data/` so notebooks run out of the box.
+- Associated machine learning models are available via linked Zenodo repo's.   
 - Larger original datasets are not necessary for reproducing the examples.  
 - Figures in the accompanying paper are generated from these reduced datasets.
 
