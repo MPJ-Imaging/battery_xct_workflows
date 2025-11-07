@@ -83,9 +83,10 @@ ChatGPT (OpenAI) was used to assist with language editing. All software, logic, 
 
 # Competing Interests
 
-Co-authors Matt D. R. Kok and James B. Robinson are affiliated with Sention Technologies Limited, a company with potential commercial interest in applications related to this study. The company was not involved in the research presented.
+Co-authors M.D.R.K., J.B.R. and P.R.S. are affiliated with Sention Technologies Limited, a company with potential commercial interest in applications related to this study. The company was not involved in the research presented.
 
 # References
+
 
 
 
