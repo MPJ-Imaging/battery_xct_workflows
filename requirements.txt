@@ -23,7 +23,7 @@ pooch>=1.8                 # for robust cached downloads
 
 # ---------- DL stack -----------
 tensorflow==2.17.*         # CPU build; stable with tf.keras API
-keras<3.9.*                
+keras==3.9.*                
 h5py>=3.8,<4               # safe with TF 2.15+ checkpoints
 segmentation-models==1.0.1 # uses tf.keras (set SM_FRAMEWORK=tf.keras)             
 
@@ -33,5 +33,6 @@ opencv-python-headless>=4.8
 # ---------- Optional but useful ----------
 # jupyterlab>=4.0
 # notebook>=7.0
+
 
 
