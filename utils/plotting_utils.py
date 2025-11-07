@@ -14,6 +14,40 @@ def show_overlay(img, msk, ax, title=""):
     ax.set_title(title)
     ax.axis("off")
 
+def overlay_multilabel(gray, seg, show = True, title = 'Overlayed Image'):
+    # Normalize grayscale to [0,1]
+    gray = gray.astype(np.float32)
+    gmin, gmax = gray.min(), gray.max()
+    if gmax > gmin:
+        gray = (gray - gmin) / (gmax - gmin)
+
+    # Random colormap
+    rng = np.random.default_rng(42)
+    max_label = np.max(seg)
+    alpha = 0.5
+    colors = np.zeros((max_label + 1, 4), dtype=np.float32)
+    colors[0, 3] = 0.0                     # background fully transparent
+    colors[1:, :3] = rng.random((max_label, 3))
+    colors[1:, 3] = alpha
+    rand_cmap = ListedColormap(colors)
+
+    # Colorize labels → RGBA
+    rgba = rand_cmap(seg)                  # (H, W, 4)
+    a = rgba[..., 3:4]                     # (H, W, 1)
+    color = rgba[..., :3]                  # (H, W, 3)
+
+    # Alpha-composite on grayscale
+    rgb_gray = np.repeat(gray[..., None], 3, axis=2)
+    composite = (1 - a) * rgb_gray + a * color
+
+    # Show
+    plt.figure()
+    plt.axis('off')
+    plt.title(title)
+    plt.imshow(composite)
+    if show == True:
+        plt.show()
+
 def view_axis0(volume, *, vmin=None, vmax=None, cmap='gray',
                downsample=1, continuous_update=False):
     """
