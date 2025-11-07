@@ -71,7 +71,7 @@ This contribution meets this need as a set of open and reproducible analysis wor
 
 # Conclusion
 
-Reliable battery QA is essential for performance, safety, and trust in Li-ion technologies, and XCT is a key tool for observing defects before they become failures [@attia2025challenges]. However, without open, shareable analysis pipelines, XCT results are difficult to compare or reproduce across labs and products. `battery_xct_workflows` addresses this gap by providing examples for common cylindrical cell QA tasks performed with XCT. Example segmentation methods are also demonstrated using both ML and classic CV approaches. By packaging runnable code, data, and narrative in one place, these workflows lower the barrier to quantitative XCT analysis. We hope this resource will seed a community of practice around open battery QA, with future extensions to additional cell formats (pouch cells, prismatic cells), uncertainty reporting, and integration into automated testing pipelines.
+Reliable battery QA is essential for performance, safety, and trust in Li-ion technologies, and XCT is a key tool for observing defects before they become failures [@attia2025challenges]. However, without open, shareable analysis pipelines, XCT results are difficult to compare or reproduce across labs and products. `battery_xct_workflows` addresses this gap by providing examples for common cylindrical cell QA tasks performed with XCT. Example segmentation methods are also demonstrated using both ML and classic CV approaches. By packaging runnable code, data, and narrative in one place, these workflows lower the barrier to quantitative XCT analysis. We hope this resource will seed a community of practice around open battery QA, with future extensions to additional open-source ML models, cell formats (pouch cells, prismatic cells), uncertainty reporting, and integration into automated testing pipelines.
 
 # Acknowledgements
 
@@ -86,6 +86,7 @@ ChatGPT (OpenAI) was used to assist with language editing. All software, logic, 
 Co-author Matt D. R. Kok is affiliated with Sention Technologies Limited, a company with potential commercial interest in applications related to this study. The company was not involved in the research presented.
 
 # References
+
 
 
 
