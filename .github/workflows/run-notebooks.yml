@@ -21,3 +21,4 @@ jobs:
           jupyter nbconvert --to notebook --inplace --execute notebooks/01_cylindrical_cell_overhangs.ipynb
           jupyter nbconvert --to notebook --inplace --execute notebooks/02_cylindrical_cell_can.ipynb
           jupyter nbconvert --to notebook --inplace --execute notebooks/03_cylindrical_cell_electrode_winding.ipynb
+          jupyter nbconvert --to notebook --inplace --execute notebooks/04_cylindrical_cell_segmentation.ipynb
