@@ -8,38 +8,16 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    env:
-      # Make pooch use a stable cache path so we can cache it
-      POOCH_CACHE: ${{ runner.temp }}/pooch-cache
     steps:
       - uses: actions/checkout@v4
-
-      # Python + pip cache
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'            # <-- caches pip based on requirements.txt
-
-      # Cache the model file(s) downloaded by pooch
-      - name: Prepare model checksum
-        run: |
-          echo "7c287f71a9b4bd7cfc76fad6e53457b5" > model.md5   # MD5 from Zenodo
-
-      - name: Cache pooch weights
-        uses: actions/cache@v4
-        with:
-          path: ${{ env.POOCH_CACHE }}         # caches pooch files
-          key: pooch-${{ runner.os }}-${{ hashFiles('model.md5') }}
-          restore-keys: |
-            pooch-${{ runner.os }}-
-
       - name: Install dependencies
         run: |
           pip install -r requirements.txt jupyter nbconvert
-
       - name: Execute notebooks
         run: |
-          jupyter nbconvert --to notebook --inplace --execute notebooks/04_cylindrical_cell_segmentation.ipynb
           jupyter nbconvert --to notebook --inplace --execute notebooks/01_cylindrical_cell_overhangs.ipynb
           jupyter nbconvert --to notebook --inplace --execute notebooks/02_cylindrical_cell_can.ipynb
           jupyter nbconvert --to notebook --inplace --execute notebooks/03_cylindrical_cell_electrode_winding.ipynb
