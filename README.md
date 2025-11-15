@@ -13,7 +13,7 @@ The notebooks provide reproducible examples for:
 All notebooks include lightweight example datasets (cropped, 8-bit volumes) so they run out of the box. 
 
 Example Machine Learning (ML) models include:
-1. **Electrode Overhangs Segmentation with mini U-net - A U-net segmentation model trained on a miniature dataset of 21700 cylindricl cells.
+1. **Electrode Overhangs Segmentation with mini U-net** - A U-net segmentation model trained on a miniature dataset of 21700 cylindricl cells.
 
 Model weights and example datasets are made available on linked Zenodo pages. Alongside models, example data wrangling and training scripts are made available on Zenodo and this Github repository.
 
@@ -35,6 +35,13 @@ These notebooks can be run from your browser via **binder** (links below). Simpl
 - `04_cylindrical_cell_segmentation.ipynb`  
   [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MPJ-Imaging/battery_xct_workflows/HEAD?labpath=notebooks/04_cylindrical_cell_segmentation.ipynb)
   
+---
+
+## ML Models
+
+- `01_elecrode_overhang_segmentation_unet`
+  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17280289.svg)](https://doi.org/10.5281/zenodo.17280289)
+
 ---
 
 ## Installation  
