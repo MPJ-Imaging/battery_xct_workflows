@@ -39,9 +39,9 @@ These notebooks can be run from your browser via **binder** (links below). Simpl
 
 ## ML Models
 
-- `01_elecrode_overhang_segmentation_unet`
+- `01_electrode_overhang_segmentation_unet`
   [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17280289.svg)](https://doi.org/10.5281/zenodo.17280289)
-
+  
 ---
 
 ## Installation  
