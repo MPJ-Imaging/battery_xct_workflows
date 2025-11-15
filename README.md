@@ -15,7 +15,7 @@ All notebooks include lightweight example datasets (cropped, 8-bit volumes) so t
 ---
 
 Example Machine Learning (ML) models include:
-1. **Electrode Overhangs Segmentation with mini U-net** - A U-net segmentation model trained on a miniature dataset of 21700 cylindricl cells.
+1. **Electrode Overhangs Segmentation with mini U-net** - A U-net segmentation model trained on a miniature dataset of 21700 cylindrical cells.
 
 Model weights and example datasets are made available on linked Zenodo pages. Alongside models, example data wrangling and training scripts are made available on Zenodo and this Github repository.
 
