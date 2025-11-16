@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - '**'         # run on all branches; remove this if you only want main
+      - dev
   pull_request:
     branches:
       - main
