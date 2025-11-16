@@ -62,7 +62,7 @@ This contribution meets this need as a set of open and reproducible analysis wor
 
 # Software Description
 
-The battery_xct_workflows repository is organised around executable Jupyter notebooks rather than a standalone library. The top-level `notebooks/` directory contains analysis workflows for Li-ion battery QA (overhangs, canister geometry, winding unrolling, and example segmentations), each bundled with small example datasets so they can be executed end-to-end. Reusable image-processing and utility functions are collected in `utils/`, while ML-specific code lives under `models/`. For the current release, the segmentation model example is implemented in `models/overhangs_mini_unet/`, which provides data generators and a U-Net + ResNet model builder.
+The battery_xct_workflows repository is organised around executable Jupyter notebooks rather than a standalone library. The top-level `notebooks/` directory contains analysis workflows for Li-ion battery QA (overhangs, canister geometry, winding unrolling, and example segmentations), each bundled with small example datasets so they can be executed end-to-end (and on binder). Reusable image-processing and utility functions are collected in `utils/`, while ML-specific code lives under `models/`. For the current release, the segmentation model example is implemented in `models/overhangs_mini_unet/`, which provides data generators and a U-Net + ResNet model builder.
 
 Large artefacts (trained network weights and full-resolution 3D image volumes) are not stored in the GitHub repository but are archived on Zenodo and referenced from the code and notebooks via DOIs. Each model directory includes a README describing its purpose, links to the corresponding Zenodo record, and instructions for reproducing or fine-tuning the model using the training scripts provided alongside the notebooks.
 
@@ -98,6 +98,7 @@ ChatGPT (OpenAI) was used to assist with language editing. All software, logic, 
 Co-authors M.D.R.K., J.B.R. and P.R.S. are affiliated with Sention Technologies Limited, a company with potential commercial interest in applications related to this study. The company was not involved in the research presented.
 
 # References
+
 
 
 
