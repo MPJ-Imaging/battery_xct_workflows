@@ -6,7 +6,7 @@ import tifffile as tifff
 
 from pathlib import Path
 
-from battery_xct_workflows.models.overhangs_unet_segmentation.data_generator import (
+from models.overhangs_unet_segmentation.data_generator import (
     combined_generator,
     custom_preprocessing_masks,
     add_noise,
@@ -16,7 +16,7 @@ from battery_xct_workflows.models.overhangs_unet_segmentation.data_generator imp
     IMG_CHANNELS,
 )
 
-from battery_xct_workflows.models.overhangs_unet_segmentation.unet_resnet_overhangs import (
+from models.overhangs_unet_segmentation.unet_resnet_overhangs import (
     TiffDataGenerator,
 )
 
@@ -199,4 +199,5 @@ def test_tiff_data_generator_shuffle_on_epoch_end(tmp_path):
     # With high probability, the order should change at least once.
     # (If it doesn't, test will occasionally be flaky, but it's extremely unlikely.)
     assert not np.array_equal(original_indices, new_indices)
+
 
