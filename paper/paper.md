@@ -1,5 +1,5 @@
 ---
-title: "battery_xct_workflows: Open Jupyter Notebooks for Lithium-Ion Battery QA using XCT"
+title: "battery_xct_workflows: Open Jupyter Notebooks and Models for Lithium-Ion Battery QA using XCT"
 tags:
   - batteries
   - x-ray computed tomography
@@ -43,12 +43,12 @@ bibliography: paper.bib
 
 X-ray computed tomography (XCT) enables non-destructive, 3D visualization of lithium-ion (Li-ion) battery components and microstructure. At the cell level, XCT is especially useful for detecting manufacturing and quality issues in Li-ion cells [@attia2025challenges]. However, turning XCT images into quantitative and reproducible quality assurance (QA) requires custom analysis pipelines that are rarely shared openly.
 
-This submission provides a set of open Jupyter notebooks that demonstrate analysis workflows for battery XCT data. In version 1.0.3 the workflows target three critical QA tasks relevant to Li-ion cylindrical cells with the fourth notebook demonstrating relevant image segmentation approaches:
+This submission provides a set of open Jupyter notebooks and machine learning (ML) models that demonstrate analysis workflows for battery XCT data. In version 1.0.3 the workflows target three critical QA tasks relevant to Li-ion cylindrical cells with the fourth notebook demonstrating relevant image segmentation approaches:
 
 1. Quantifying electrode overhang using multiple geometric measures;
 2. Measuring the canister (e.g., diameter, eccentricity) and detecting dents via ellipse fitting;
 3. Transforming 2D slices of the electrode winding into polar coordinates [@kok2019virtual] and fitting an ideal spiral to quantify deviations from the expected winding pattern [@sun2025health]; and
-4. Example segmentations using machine learning (ML) and classic computer vision (CV) approaches to segment electrode winding and overhangs (an open-source segmentation model is made avialble alongside this notebook).
+4. Example segmentations using ML and classic computer vision (CV) approaches to segment electrode winding and overhangs (an open-source segmentation model is made avialble alongside this notebook).
 
 Each workflow is implemented as a Jupyter notebook [@kluyver2016jupyter] and bundled with example data (images and, where appropriate, segmentation masks) so it can be run without specialized preprocessing. The workflows are written in Python and built on widely used scientific and machine-learning libraries, including NumPy [@harris2020numpy], SciPy [@virtanen2020scipy], scikit-image [@van2014scikit], Matplotlib [@hunter2007matplotlib], scikit-learn [@pedregosa2011scikit], OpenCV [@opencv_library], TensorFlow [@tensorflow2015-whitepaper], and Keras [@chollet2015keras]. For ease of access, all notebooks can be launched directly in the browser via Binder [@jupyter_binder_2018], requiring no local installation. 
 
@@ -88,6 +88,7 @@ ChatGPT (OpenAI) was used to assist with language editing. All software, logic, 
 Co-authors M.D.R.K., J.B.R. and P.R.S. are affiliated with Sention Technologies Limited, a company with potential commercial interest in applications related to this study. The company was not involved in the research presented.
 
 # References
+
 
 
 
