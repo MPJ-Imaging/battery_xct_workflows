@@ -3,9 +3,11 @@ name: Model tests
 on:
   push:
     branches:
+      - main
       - dev
   pull_request:
     branches:
+      - main
       - dev
   workflow_dispatch:
 
