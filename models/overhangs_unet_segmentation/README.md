@@ -36,7 +36,7 @@ The goal is not to provide a production-ready model, but a transparent reference
 
 Full-resolution training data and the trained model are hosted on Zenodo:
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17543023.svg)](https://doi.org/10.5281/zenodo.17543023)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17624606.svg)](https://doi.org/10.5281/zenodo.17624606)
 
 ## Expected Directory Structure before training/retraining
 
