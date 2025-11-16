@@ -27,7 +27,7 @@ Model weights and example datasets are made available on linked Zenodo pages. Al
 
 ## Cloud Notebooks
 
-These notebooks can be run from your browser via **binder** (links below). Simply run all cells to reproduce the workflows. Each notebook generates example plots and figures.
+Notebooks can be run from your browser via **binder** (links below). Simply run all cells to reproduce the workflows. Each notebook generates example plots and figures.
 
 - `01_cylindrical_cell_overhangs.ipynb`  
   [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MPJ-Imaging/battery_xct_workflows/HEAD?labpath=notebooks/01_cylindrical_cell_overhangs.ipynb)   
