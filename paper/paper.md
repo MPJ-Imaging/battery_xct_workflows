@@ -60,6 +60,16 @@ Although XCT is increasingly used to visualize battery structures and assess man
 
 This contribution meets this need as a set of open and reproducible analysis workflows rather than a standalone software library. Because XCT analysis typically involves iterative exploration, visualization, and interpretation, Jupyter notebooks are a natural format: they combine executable code, results, and narrative explanation in one place [@kluyver2016jupyter]. By sharing these notebooks, we aim to make quantitative XCT analysis easier to understand, adapt, and extend in both battery research and the broader tomography community. By lowering the barrier to quantitative XCT analysis, these notebooks promote transparent, reproducible practice in battery science and provide adaptable templates for researchers, battery engineers, and quality specialists.
 
+# Software Description
+
+The battery_xct_workflows repository is organised around executable Jupyter notebooks rather than a standalone library. The top-level `notebooks/` directory contains analysis workflows for Li-ion battery QA (overhangs, canister geometry, winding unrolling, and example segmentations), each bundled with small example datasets so they can be executed end-to-end. Reusable image-processing and utility functions are collected in `utils/`, while ML-specific code lives under `models/`. For the current release, the segmentation model example is implemented in `models/overhangs_mini_unet/`, which provides data generators and a U-Net + ResNet model builder.
+
+Large artefacts (trained network weights and full-resolution 3D image volumes) are not stored in the GitHub repository but are archived on Zenodo and referenced from the code and notebooks via DOIs. Each model directory includes a README describing its purpose, links to the corresponding Zenodo record, and instructions for reproducing or fine-tuning the model using the training scripts provided alongside the notebooks.
+
+Testing is split between unit-style tests for the model code and integration tests for the notebooks. Lightweight Python tests under `models/tests/` verify that data generators, model-building functions, and saved models have consistent interfaces (for example, checking tensor shapes, value ranges, and basic forward passes). These tests are run automatically via GitHub Actions on pushes and pull requests. A separate scheduled GitHub Actions workflow executes the core notebooks with nbconvert once per day, acting as an integration/smoke test that the published workflows still run to completion with the current dependency set.
+
+Contributions are encouraged in the form of improvements to existing notebooks and utilities, additional QA workflows, or new segmentation/denoising models. Prospective contributors are invited to open an issue to discuss proposed changes, and to submit pull requests that (i) follow the existing directory layout (new models under `models/` and new workflows under `notebooks/`), (ii) include minimal example data or clear links to public datasets, and (iii) add or update tests where appropriate so that the continuous integration checks remain green.
+
 # Illustrative outputs
 
 ![(a) Slice through a cylindrical cell tomogram with overhang masks overlayed, (b) distribution of overhang deflection angles in the cell analysed in the notebook.](fig1.png)  
@@ -88,6 +98,7 @@ ChatGPT (OpenAI) was used to assist with language editing. All software, logic, 
 Co-authors M.D.R.K., J.B.R. and P.R.S. are affiliated with Sention Technologies Limited, a company with potential commercial interest in applications related to this study. The company was not involved in the research presented.
 
 # References
+
 
 
 
