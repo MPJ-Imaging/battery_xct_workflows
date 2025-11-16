@@ -2,6 +2,8 @@
 
 # Battery XCT Workflows  
 
+## Notebooks
+
 A collection of open Jupyter notebooks and models for **quality assessment workflows** of lithium-ion batteries using X-ray Computed Tomography (XCT).  
 
 The notebooks provide reproducible examples for:  
@@ -13,6 +15,8 @@ The notebooks provide reproducible examples for:
 All notebooks include lightweight example datasets (cropped, 8-bit volumes) so they run out of the box. 
 
 ---
+
+## Models
 
 Example Machine Learning (ML) models include:
 1. **Electrode Overhangs Segmentation with mini U-net** - *A U-net segmentation model trained on a miniature dataset of 21700 cylindrical cells.*
