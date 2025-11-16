@@ -40,21 +40,24 @@ Full-resolution training data and the trained model are hosted on Zenodo:
 
 ## Expected Directory Structure 
 
-  overhangs_mini_unet/
-    data_generator.py
-    unet_resnet_overhangs.py
-    __init__.py
-    overhangs_mini_unet.keras         # optional: small reference model
-    data/
-      images.tif                      # full image stack (optional, for augmentation script)
-      masks.tif                       # full mask stack (optional, for augmentation script)
-      train/
-        images/                       # augmented training patches
-        masks/
-      test/
-        images/                       # augmented validation patches
-        masks/
-
+```text
+battery_xct_workflows/
+  notebooks/
+    01_cylindrical_cell_overhangs.ipynb
+    02_cylindrical_cell_can.ipynb
+  models/
+    overhangs_mini_unet/
+      data_generator.py
+      unet_resnet_overhangs.py
+      README.md
+      data/
+        train/
+          images/
+          masks/
+        test/
+          images/
+          masks/
+```
 
 ## Usage and Contributions 
 
