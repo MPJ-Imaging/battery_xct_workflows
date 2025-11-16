@@ -1,6 +1,6 @@
 # Overhangs Mini U-Net (cylindrical cell segmentation)
 
-This directory contains a compact U-Net–style model (with a ResNet encoder) for segmenting electrode overhang regions in Li-ion cylindrical cell XCT slices. It is designed as a reproducible, minimal example to accompany the overhang analysis notebook in `battery_xct_workflows`.
+This directory contains a U-Net–style model (with a ResNet encoder) for segmenting electrode overhang regions in Li-ion cylindrical cell XCT slices. It is designed as a reproducible, minimal example to accompany the overhang analysis notebook in `battery_xct_workflows`.
 
 The goal is not to provide a production-ready model, but a transparent reference implementation that can be inspected, retrained, or adapted.
 
