@@ -3,7 +3,7 @@
 import numpy as np
 import tensorflow as tf
 
-from battery_xct_workflows.models.overhangs_mini_unet.unet_resnet_overhangs import (
+from battery_xct_workflows.models.overhangs_unet_segmentations.unet_resnet_overhangs import (
     build_overhangs_model,
     IMG_HEIGHT,
     IMG_WIDTH,
@@ -48,3 +48,4 @@ def test_model_forward_pass_output_shape():
     # Check outputs are in [0, 1] range due to sigmoid
     assert y.min() >= 0.0
     assert y.max() <= 1.0
+
