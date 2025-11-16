@@ -58,7 +58,7 @@ All materials are archived with a Zenodo DOI to ensure long-term accessibility [
 
 Although XCT is increasingly used to visualize battery structures and assess manufacturing quality, reproducible analysis workflows remain scarce. New users often stop at qualitative inspection, and many depend on proprietary software with limited documentation and availability. This fragmentation complicates comparisons across studies and slows the adoption of best practices.
 
-This contribution meets this need as a set of open and reproducible analysis workflows rather than a standalone software library. Because XCT analysis typically involves iterative exploration, visualization, and interpretation, Jupyter notebooks are a natural format: they combine executable code, results, and narrative explanation in one place [@kluyver2016jupyter]. By sharing these notebooks, we aim to make quantitative XCT analysis easier to understand, adapt, and extend in both battery research and the broader tomography community. By lowering the barrier to quantitative XCT analysis, these notebooks promote transparent, reproducible practice in battery science and provide adaptable templates for researchers, battery engineers, and quality specialists.
+This contribution meets this need as a set of open and reproducible analysis workflows rather than a standalone software library. Because XCT analysis typically involves iterative exploration, visualization, and interpretation, Jupyter notebooks are a natural format: they combine executable code, results, and narrative explanation in one place [@kluyver2016jupyter]. By sharing these notebooks, we aim to make quantitative XCT analysis easier to understand, adapt, and extend in both battery research and commercial environments. By lowering the barrier to quantitative XCT analysis, these notebooks promote transparent, reproducible practice in battery science and provide adaptable templates for researchers, battery engineers, and quality specialists.
 
 # Software Description
 
@@ -98,6 +98,7 @@ ChatGPT (OpenAI) was used to assist with language editing. All software, logic, 
 Co-authors M.D.R.K., J.B.R. and P.R.S. are affiliated with Sention Technologies Limited, a company with potential commercial interest in applications related to this study. The company was not involved in the research presented.
 
 # References
+
 
 
 
