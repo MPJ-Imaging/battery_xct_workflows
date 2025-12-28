@@ -3,7 +3,7 @@ name: Run notebooks
 on:
   schedule:
     # Run daily at 03:00 UTC
-    - cron: '0 3 * * *'
+    - cron: '17 3 * * *'
   workflow_dispatch:
 
 jobs:
