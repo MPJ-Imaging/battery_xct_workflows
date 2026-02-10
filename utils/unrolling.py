@@ -444,24 +444,30 @@ def plot_unrolled_layers(
 
     Units / scaling
     --------------
-    The function can optionally scale radii before plotting.
+    The function can optionally scale radii (and selected legend metrics) before plotting.
 
     - units="auto" (default):
         * if pixel_size is None -> plot as-is (assumed pixels)
         * if pixel_size is not None -> plot radii multiplied by pixel_size
     - units="px":
-        Plot radii as-is (no scaling), regardless of pixel_size.
+        Plot as-is (no scaling), regardless of pixel_size.
     - units="physical":
         Plot radii multiplied by pixel_size. Requires pixel_size to be provided.
 
+    Metrics (legend)
+    ----------------
+    If `metric` is 'maxae' or 'rmse' and the corresponding column exists, the displayed
+    value is scaled using the *same* factor as radii when units indicate physical scaling.
+
     WARNING: If scaling is enabled (units="physical" or units="auto" with pixel_size set),
-    the plotted radial values are **multiplied by `pixel_size` exactly**. Ensure `pixel_size`
-    and `physical_unit_label` correspond to the units you want (e.g. mm/px -> "mm").
+    plotted radii and displayed metric values are **multiplied by `pixel_size` exactly**.
+    Ensure `pixel_size` and `physical_unit_label` correspond to the units you want
+    (e.g. mm/px -> "mm").
 
     Notes
     -----
-    - No on-the-fly metric computation. If `metric` is 'maxae' or 'rmse', it is shown
-      in the legend only if the corresponding column exists and is finite.
+    - No on-the-fly metric computation. Legend metrics are shown only if the column exists
+      and the value is finite.
     """
     # --- validation ---
     if not isinstance(df, pd.DataFrame):
@@ -570,7 +576,9 @@ def plot_unrolled_layers(
             try:
                 val = float(row[metric_col].values[0])
                 if np.isfinite(val):
-                    label = f"{label}: {metric_label} {val:.3f}"
+                    # scale metric value the same way as radii when converting units
+                    val_scaled = val * scale
+                    label = f"{label}: {metric_label} {val_scaled:.3f}"
             except Exception:
                 pass
 
@@ -623,4 +631,6 @@ def plot_unrolled_layers(
     return ax
 
 
+
     
+
