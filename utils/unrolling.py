@@ -444,7 +444,7 @@ def plot_unrolled_layers(
 
     Units / scaling
     --------------
-    The function can optionally scale radii (and selected legend metrics) before plotting.
+    The function can optionally scale radii (and legend metrics / per-chunk errors) before plotting.
 
     - units="auto" (default):
         * if pixel_size is None -> plot as-is (assumed pixels)
@@ -454,15 +454,16 @@ def plot_unrolled_layers(
     - units="physical":
         Plot radii multiplied by pixel_size. Requires pixel_size to be provided.
 
-    Metrics (legend)
-    ----------------
-    If `metric` is 'maxae' or 'rmse' and the corresponding column exists, the displayed
-    value is scaled using the *same* factor as radii when units indicate physical scaling.
+    Metrics + error coloring
+    ------------------------
+    If scaling is enabled (units="physical" or units="auto" with pixel_size set), then:
+      - radii are multiplied by `pixel_size`
+      - legend metric values ('rmse'/'maxae' if shown) are multiplied by `pixel_size`
+      - per-chunk errors used for `color_by_error` are multiplied by `pixel_size`
+        (and vmin/vmax are computed in those scaled units if not provided)
 
-    WARNING: If scaling is enabled (units="physical" or units="auto" with pixel_size set),
-    plotted radii and displayed metric values are **multiplied by `pixel_size` exactly**.
-    Ensure `pixel_size` and `physical_unit_label` correspond to the units you want
-    (e.g. mm/px -> "mm").
+    WARNING: Scaling is a simple scalar multiplication by `pixel_size`. Ensure `pixel_size`
+    matches your desired physical units (e.g. mm/px) and set `physical_unit_label` accordingly.
 
     Notes
     -----
@@ -533,13 +534,14 @@ def plot_unrolled_layers(
     metric_col = {"maxae": maxae_col, "rmse": rmse_col}.get(metric, None)
     metric_label = {"maxae": "MaxAE", "rmse": "RMSE"}.get(metric, None)
 
-    # If coloring by error, precompute vmin/vmax across selected rows (if not provided)
+    # If coloring by error, precompute vmin/vmax across selected rows (if not provided).
+    # IMPORTANT: errors are scaled by the same factor as radii when units indicate scaling.
     use_error_colors = bool(color_by_error) and (error_col in data.columns)
     if use_error_colors and vmin is None and vmax is None:
         all_errs = []
         for _, row in data.iterrows():
             try:
-                errs = np.asarray(row[error_col], dtype=float)
+                errs = np.asarray(row[error_col], dtype=float) * scale
                 angs = np.asarray(row[angle_col], dtype=float)
                 rads = np.asarray(row[radius_col], dtype=float)
                 if errs.shape == angs.shape == rads.shape:
@@ -576,18 +578,16 @@ def plot_unrolled_layers(
             try:
                 val = float(row[metric_col].values[0])
                 if np.isfinite(val):
-                    # scale metric value the same way as radii when converting units
-                    val_scaled = val * scale
-                    label = f"{label}: {metric_label} {val_scaled:.3f}"
+                    label = f"{label}: {metric_label} {(val * scale):.3f}"
             except Exception:
                 pass
 
         if use_error_colors:
-            # faint grey line for context + colored scatter by error
+            # faint grey line for context + colored scatter by (scaled) error
             ax.plot(angles, radii, color="0.7", lw=line_width, alpha=line_alpha, label=label)
             try:
-                errs = np.asarray(row[error_col].values[0], dtype=float)
-                if errs.shape == angles.shape and np.isfinite(errs).any():
+                errs = np.asarray(row[error_col].values[0], dtype=float) * scale
+                if errs.shape == angles.shape == radii.shape and np.isfinite(errs).any():
                     last_scatter = ax.scatter(
                         angles, radii,
                         c=errs, cmap=cmap, vmin=vmin, vmax=vmax,
@@ -622,15 +622,12 @@ def plot_unrolled_layers(
             fraction=0.08,
             aspect=40
         )
-        cbar.set_label("Absolute error per chunk")
+        # label reflects scaling choice
+        err_units = y_units  # same scaling factor as radii
+        cbar.set_label(f"Absolute error per chunk ({err_units})")
 
     # layout
     if created_ax:
         plt.tight_layout()
 
     return ax
-
-
-
-    
-
