@@ -12,6 +12,7 @@ def virtual_unroll(
     seg: np.ndarray,
     CoM: Optional[Union[Tuple[float, float], Sequence[float], np.ndarray]] = None,
     chunk_size: int = 75,
+    pixel_size: Optional[float] = None,
 ) -> pd.DataFrame:
     """
     Unroll a binary spiral segmentation into polar coordinates, split each winding
@@ -33,6 +34,17 @@ def virtual_unroll(
         Target number of pixels per angular chunk when downsampling the (angle, radius)
         samples for each layer. The number of chunks is
         `max(1, len(layer_samples) // chunk_size)`. Default is 75.
+    pixel_size : float, optional
+        Physical size per pixel (e.g., mm/px, µm/px). If provided (not None), **all radial
+        outputs are multiplied by this value** so that:
+          - 'radial_positions' are returned in physical units (pixel_size * pixels)
+          - 'chunk_thkn' is returned in physical units (pixel_size * pixels)
+        If None (default), radial outputs remain in the native units of the distance
+        transform (typically pixels).
+
+        WARNING: This function applies a simple scalar conversion. Ensure `pixel_size`
+        matches the units you want and that the input segmentation pixels represent that
+        sampling (i.e., outputs will be multiplied by `pixel_size` exactly).
 
     Returns
     -------
@@ -43,9 +55,9 @@ def virtual_unroll(
         - 'angular_positions' : list of float
             Mean angular positions (degrees) for each chunk in the layer.
         - 'radial_positions' : list of float
-            Mean radial distances (pixels) for each chunk in the layer.
+            Mean radial distances (pixels if pixel_size is None; otherwise physical units).
         - 'chunk_thkn' : list of float
-            Radial thickness per chunk (max(radius) - min(radius)).
+            Radial thickness per chunk (pixels if pixel_size is None; otherwise physical units).
 
     Notes
     -----
@@ -61,6 +73,13 @@ def virtual_unroll(
         raise ValueError(f"`seg` must be 2D, got shape {seg.shape}.")
     if not isinstance(chunk_size, int) or chunk_size <= 0:
         raise ValueError(f"`chunk_size` must be a positive int, got {chunk_size}.")
+    if pixel_size is not None:
+        try:
+            pixel_size = float(pixel_size)
+        except (TypeError, ValueError):
+            raise TypeError(f"`pixel_size` must be a number or None, got {type(pixel_size)}.")
+        if pixel_size <= 0:
+            raise ValueError(f"`pixel_size` must be > 0 if provided, got {pixel_size}.")
 
     seg_bool = seg.astype(bool)
 
@@ -73,16 +92,26 @@ def virtual_unroll(
             com = (float(arr[0]), float(arr[1]))
         elif arr.ndim == 2 and arr.shape == seg_bool.shape:
             contours = find_contours((arr).astype(float), 0.5)
-            outer = max(contours, key=lambda c: 0.5*np.abs(np.sum(c[:,1]*np.roll(c[:,0],-1) - c[:,0]*np.roll(c[:,1],-1))))
-            pts_xy = np.column_stack([outer[:,1], outer[:,0]])  # (x,y)
+            outer = max(
+                contours,
+                key=lambda c: 0.5
+                * np.abs(
+                    np.sum(
+                        c[:, 1] * np.roll(c[:, 0], -1)
+                        - c[:, 0] * np.roll(c[:, 1], -1)
+                    )
+                ),
+            )
+            pts_xy = np.column_stack([outer[:, 1], outer[:, 0]])  # (x,y)
 
             model, inliers = ransac(
                 pts_xy,
                 EllipseModel,
                 min_samples=5,
-                residual_threshold=1.0,   
-                max_trials=2000)
-            
+                residual_threshold=1.0,
+                max_trials=2000,
+            )
+
             xc, yc, a, b, phi = model.params
             com = (yc, xc)
         else:
@@ -121,6 +150,8 @@ def virtual_unroll(
     label_seg = (max_lab + 1 - separated)
     label_seg = np.where(separated == 0, 0, label_seg)
 
+    scale = 1.0 if pixel_size is None else pixel_size
+
     records = []
     for layer_id in range(1, int(label_seg.max()) + 1):
         mask = (label_seg == layer_id)
@@ -140,8 +171,8 @@ def virtual_unroll(
         radius_chunks = np.array_split(layer_radii, n_chunks)
 
         angulars = [float(np.mean(chunk)) for chunk in angle_chunks]
-        radials = [float(np.mean(chunk)) for chunk in radius_chunks]
-        chunk_thkn = [float(np.max(chunk) - np.min(chunk)) for chunk in radius_chunks]
+        radials = [float(np.mean(chunk)) * scale for chunk in radius_chunks]
+        chunk_thkn = [float(np.max(chunk) - np.min(chunk)) * scale for chunk in radius_chunks]
 
         records.append(
             {
@@ -389,11 +420,15 @@ def plot_unrolled_layers(
     scatter_size: float = 18.0,
     line_alpha: float = 0.6,           # for grey context line with error coloring
     line_width: float = 1.2,
+    # --- units / scaling ---
+    pixel_size: Optional[float] = None,
+    units: str = "auto",               # {"auto", "px", "physical"}
+    physical_unit_label: str = "units", # e.g. "mm", "µm"
     # --- axis/figure options ---
     title: Optional[str] = None,
     legend_outside: bool = True,
     xlabel: str = "Angular position (deg)",
-    ylabel: str = "Radial position (px)",
+    ylabel: Optional[str] = None,      # if None, auto from units/pixel_size
     figsize: Sequence[float] = (7.0, 5.0),
     ax: Optional[plt.Axes] = None,
 ) -> plt.Axes:
@@ -407,6 +442,22 @@ def plot_unrolled_layers(
       colored by per-chunk absolute error from `error_col`. A horizontal colorbar is shown
       at the bottom (if `show_colorbar`).
 
+    Units / scaling
+    --------------
+    The function can optionally scale radii before plotting.
+
+    - units="auto" (default):
+        * if pixel_size is None -> plot as-is (assumed pixels)
+        * if pixel_size is not None -> plot radii multiplied by pixel_size
+    - units="px":
+        Plot radii as-is (no scaling), regardless of pixel_size.
+    - units="physical":
+        Plot radii multiplied by pixel_size. Requires pixel_size to be provided.
+
+    WARNING: If scaling is enabled (units="physical" or units="auto" with pixel_size set),
+    the plotted radial values are **multiplied by `pixel_size` exactly**. Ensure `pixel_size`
+    and `physical_unit_label` correspond to the units you want (e.g. mm/px -> "mm").
+
     Notes
     -----
     - No on-the-fly metric computation. If `metric` is 'maxae' or 'rmse', it is shown
@@ -419,6 +470,42 @@ def plot_unrolled_layers(
     missing = required_cols - set(df.columns)
     if missing:
         raise ValueError(f"DataFrame missing required columns: {sorted(missing)}")
+
+    units = str(units).lower()
+    if units not in {"auto", "px", "physical"}:
+        raise ValueError("`units` must be one of {'auto', 'px', 'physical'}.")
+
+    if pixel_size is not None:
+        try:
+            pixel_size = float(pixel_size)
+        except (TypeError, ValueError):
+            raise TypeError(f"`pixel_size` must be a number or None, got {type(pixel_size)}.")
+        if pixel_size <= 0:
+            raise ValueError(f"`pixel_size` must be > 0 if provided, got {pixel_size}.")
+
+    if units == "physical" and pixel_size is None:
+        raise ValueError("`units='physical'` requires `pixel_size` to be provided.")
+
+    # decide scaling
+    scale = 1.0
+    y_units = "px"
+    if units == "px":
+        scale = 1.0
+        y_units = "px"
+    elif units == "physical":
+        scale = pixel_size  # validated above
+        y_units = str(physical_unit_label)
+    else:  # auto
+        if pixel_size is None:
+            scale = 1.0
+            y_units = "px"
+        else:
+            scale = pixel_size
+            y_units = str(physical_unit_label)
+
+    # default ylabel if not provided
+    if ylabel is None:
+        ylabel = f"Radial position ({y_units})"
 
     data = df
     if image_id is not None:
@@ -471,7 +558,7 @@ def plot_unrolled_layers(
 
         try:
             angles = np.asarray(row[angle_col].values[0], dtype=float)
-            radii  = np.asarray(row[radius_col].values[0], dtype=float)
+            radii  = np.asarray(row[radius_col].values[0], dtype=float) * scale
         except Exception:
             continue
         if angles.size == 0 or radii.size == 0:
@@ -492,7 +579,7 @@ def plot_unrolled_layers(
             ax.plot(angles, radii, color="0.7", lw=line_width, alpha=line_alpha, label=label)
             try:
                 errs = np.asarray(row[error_col].values[0], dtype=float)
-                if errs.shape == angles.shape == radii.shape and np.isfinite(errs).any():
+                if errs.shape == angles.shape and np.isfinite(errs).any():
                     last_scatter = ax.scatter(
                         angles, radii,
                         c=errs, cmap=cmap, vmin=vmin, vmax=vmax,
@@ -534,4 +621,6 @@ def plot_unrolled_layers(
         plt.tight_layout()
 
     return ax
+
+
     
