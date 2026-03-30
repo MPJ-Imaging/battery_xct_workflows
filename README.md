@@ -68,9 +68,9 @@ These notebooks require **Python ≥3.9**. Follow the steps below to install and
 
 ## Citation
 
-If you used these notebooks in your work please cite the Zenodo repo! 
+If you used these notebooks in your work please cite the MethodsX open source paper! 
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17280289.svg)](https://doi.org/10.5281/zenodo.17280289)
+https://doi.org/10.1016/j.mex.2026.103856
 
 ## Data availability  
 
